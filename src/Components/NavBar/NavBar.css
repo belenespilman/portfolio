@@ -1,53 +1,56 @@
 .n-wrapper {
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    top: 0;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  top: 0;
+  left: 0;
+  position: fixed; /* Add this line to make the navbar fixed */
+  width: 100%;
+  background-color: black; /* Add a background color if needed */
+  z-index: 1000; /* Add a high z-index to ensure it's on top of other elements */
 }
 
 .n-left {
-    flex: 1;
-    align-items: center;
-    justify-content: left;
-    display: flex;
-    gap: 2rem;
+  padding-left: 3.5rem;
+  flex: 1;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  gap: 2rem;
 }
 
 .n-name {
-    font-size: 1.3rem;
-    font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .n-right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-weight: 400;
+  padding-right: 3.5rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 400;
 }
 
-.n-list {
-    flex: 10;
+.n-list > ul {
+  display: flex;
+  gap: 3rem;
+  margin-right: 2rem;
 }
 
-.n-list>ul {
-    display: flex;
-    gap: 2rem;
-    margin-right: 4rem;
-}
-
-.n-list>ul :hover {
-    color: var(--orange);
-    cursor: pointer;
+.n-list > ul :hover {
+  color: var(--main);
+  cursor: pointer;
 }
 
 .n-button {
-    flex: 2;
+  flex: 2;
 }
 
 @media screen and (max-width: 480px) {
-    .n-list {
-        display: none;
-    }
+  .n-list {
+    display: none;
+  }
 }

@@ -1,12 +1,11 @@
-import Navbar from "./Components/Navbar/Navbar";
-import Intro from "./Components/Intro/Intro";
-import Services from "./Components/Services/Services";
+import Navbar from "./components/Navbar/Navbar";
+import Intro from "./components/Intro/Intro";
+import Services from "./components/Services/Services";
 import "./App.css";
-import Experience from "./Components/Experience/Experience";
-import Works from "./Components/Works/Works";
-import Portfolio from "./Components/Portfolio/Portfolio";
-import Contact from "./Components/Contact/Contact";
-import Footer from "./Components/Footer/Footer";
+import Works from "./components/Works/Works";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 import { useContext } from "react";
 import { themeContext } from "./Context";
 
@@ -23,10 +22,9 @@ function App() {
     >
       <Navbar />
       <Intro />
-      <Services />
-      <Experience />
-      <Works />
       <Portfolio />
+      <Works />
+      <Services />
       <Contact />
       <Footer />
     </div>
