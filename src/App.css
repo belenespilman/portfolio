@@ -1,0 +1,41 @@
+:root {
+  --alba: #c1669d;
+  --radiantred: #ff355e;
+  --coffee: #381b04;
+  --gray: #c8c8c8;
+  --pink: rgb(241, 177, 235);
+  --boxShadow: 0px 19px 60px rgba(55, 53, 53, 0.08);
+  --orangeCard: rgba(239, 200, 224, 0.45);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  background-color: white;
+}
+
+.App {
+  padding: 0.5rem 3.5rem;
+  overflow: hidden;
+  color: var(--black);
+}
+
+.button {
+  background: #ff355e;
+  /* box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42); */
+  border-radius: 16px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 11px 26px 11px 26px;
+}
+
+.button:hover {
+  background: #c8c8c8;
+  cursor: pointer;
+
+}
+
+
+@media screen and (max-width: 480px) {
+  .App {
+    padding: 0.5rem 1rem;
+
+  }
+}
