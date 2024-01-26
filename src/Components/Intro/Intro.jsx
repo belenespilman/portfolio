@@ -10,7 +10,7 @@ import Github from "../../img/github.png";
 import LinkedIn from "../../img/linkedin.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+import Resume from './resume.pdf';
 
 const Intro = () => {
   // Transition
@@ -33,9 +33,12 @@ const Intro = () => {
             and development, producting the Quality work.
           </span>
         </div>
-        <Link to="contact" smooth={true} spy={true}>
+        <a href={Resume} download>
+          <button className="button i-button">Download my CV</button>
+        </a>
+        {/* <Link to="contact" smooth={true} spy={true}>
           <button className="button i-button">Get In Touch</button>
-        </Link>
+        </Link> */}
         {/* social icons */}
         <div className="i-icons">
           <img src={Github} alt="" />

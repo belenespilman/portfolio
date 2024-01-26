@@ -30,6 +30,7 @@
   color: var(--gray);
   font-size: 14px;
   margin-top: 1rem;
+  width: 80%;
 }
 .s-button {
   width: 8rem;

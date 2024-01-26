@@ -21,6 +21,7 @@ body{
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
 
   --main: #d272ac;
+  --mainCard: rgba(210, 114, 172, .5)
 }
 
 .App{

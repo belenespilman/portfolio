@@ -1,13 +1,12 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({emoji, heading, detail, color}) => {
+const Card = ({heading, detail, logo, darkMode}) => {
   return (
-    <div className="card" style={{borderColor: {color}}}> 
-      <img src={emoji} alt="" />
+    <div className="card" style={{background: darkMode ? "black" : ""}}> 
+      <img src={logo} alt="" />
       <span>{heading}</span>
-      <span>{detail}</span>
-      <button className="c-button">LEARN MORE</button>
+      <span style={{color: darkMode ? "rgba(255,255,255,.8)": ""}}>{detail}</span>
     </div>
   );
 };
