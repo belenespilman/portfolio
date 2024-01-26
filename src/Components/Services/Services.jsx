@@ -5,10 +5,6 @@ import ReactCourse from '../../img/ReactCourse.png'
 import OopCourse from '../../img/OopCourse.png'
 import UiUxCourse from '../../img/uiuxCourse.png'
 
-import HeartEmoji from "../../img/heartemoji.png";
-import Glasses from "../../img/glasses.png";
-import Humble from "../../img/humble.png";
-
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 
