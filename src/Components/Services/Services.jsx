@@ -60,7 +60,7 @@ const Services = () => {
             logo={OopCourse}
             heading={"OOP"}
             darkMode={darkMode}
-            detail={"Object Oriented Programming."}
+            detail={"Object Oriented Programming. Prototypes, classes."}
           />
         </motion.div>
         {/* 3rd */}
