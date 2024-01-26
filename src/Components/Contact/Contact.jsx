@@ -16,7 +16,7 @@ const Contact = () => {
       .sendForm(
         process.env.REACT_APP_EMAIL_SERVICE_ID,
         process.env.REACT_APP_EMAIL_TEMPLATE_ID,
-        form.current,
+        form,
         process.env.REACT_APP_EMAIL_ACCESS_TOKEN,
       )
       .then(
