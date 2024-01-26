@@ -27,9 +27,12 @@ const Services = () => {
         <span style={{ color: darkMode ? 'white' : '' }}>Some of My</span>
         <span>Finished Courses</span>
         <span style={{ color: darkMode ? 'rgba(255,255,255,.8)' : '' }}>
-          Lorem ispum is simpley dummy text of printing of printing Lorem
+          I successfully undertook several professional courses
+          <br /> that enhanced my expertise in Web Development.
           <br />
-          ispum is simpley dummy text of printing
+          These included training in React.js, TailWind, Vite, Next,
+          <br />
+          JavaScript, and other cutting-edge technologies.
         </span>
         <a href={'https://platzi.com/p/belen.espilman/'} target="_blank">
           <button className="button s-button">See More</button>

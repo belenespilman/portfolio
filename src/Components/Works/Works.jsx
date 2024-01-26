@@ -25,13 +25,16 @@ const Works = () => {
           <span style={{ color: darkMode ? 'white' : '' }}>My Most Used</span>
           <span>Technologies & Frameworks</span>
           <span>
-            Lorem ispum is simpley dummy text of printing of printing Lorem
-            ispum is simpley dummy text of printingLorem ispum is simpley dummy
-            text
+            Among the frameworks I have frequently employed are React Js and its
+            associated technologies Vite and Next JS.
             <br />
-            y dummy text of printingLorem
+            Furthermore, I possess experience in project implementation
+            utilizing Tailwind and TypeScript.
             <br />
-            ispum is simpley dummy text of printing
+            Not confined solely to frontend development, my proficiency extends
+            to the backend domain,
+            <br />
+            incorporating expertise in technologies such as Node.js.
           </span>
           <Link to="contact" smooth={true} spy={true} className="s-link">
             <button className="button s-button">Let's Talk</button>

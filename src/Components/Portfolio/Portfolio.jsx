@@ -15,7 +15,7 @@ const Portfolio = () => {
     <div className="portfolio" id="portfolio">
       {/* heading */}
       <span style={{ color: darkMode ? 'white' : '' }}>Recent Projects</span>
-      <span>Portfolio</span>
+      <span>My Portfolio</span>
 
       {/* slider */}
       <Swiper
@@ -25,16 +25,33 @@ const Portfolio = () => {
         className="portfolio-slider"
       >
         <SwiperSlide>
-          <img src={Sidebar} alt="" />
+          <a
+            href="https://react-nextjs-travel-app-landing.vercel.app/"
+            target={'_blank'}
+          >
+            <img src={Sidebar} alt="" />
+          </a>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Ecommerce} alt="" />
+          <a
+            href="https://github.com/belenespilman/e-commerce-html-css-js"
+            target={'_blank'}
+          >
+            <img src={Ecommerce} alt="HTML, CSS y JavaScript E-Commerce" />
+          </a>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={MusicApp} alt="" />
+          <a href="https://belenespilman.github.io/todo-app/" target={'_blank'}>
+            <img src={MusicApp} alt="" />
+          </a>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={HOC} alt="" />
+          <a
+            href="https://belenespilman.github.io/vite-react-disney-clone/"
+            target={'_blank'}
+          >
+            <img src={HOC} alt="" />
+          </a>
         </SwiperSlide>
       </Swiper>
     </div>
