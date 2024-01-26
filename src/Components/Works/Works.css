@@ -14,16 +14,19 @@
 }
 
 .awesome > :nth-child(1) {
+  width: 200%;
   color: var(--black);
   font-size: 2.5rem;
   font-weight: bold;
 }
 .awesome > :nth-child(2) {
+  width: 200%;
   color: var(--main);
   font-size: 2.5rem;
   font-weight: bold;
 }
 .awesome > :nth-child(3) {
+  width: 200%;
   color: var(--gray);
   font-size: 14px;
   margin-top: 1rem;
@@ -43,6 +46,7 @@
 .w-right {
   width: 50%;
   position: relative;
+  margin-right: 5.5rem;
 }
 
 .w-left{
@@ -138,6 +142,8 @@
 
   .w-right {
     width: 100%;
+    margin: 0;
+    margin-left: 2rem;
     display: flex;
     align-items: flex-start;
     justify-content:start;
@@ -148,5 +154,15 @@
   }
   .w-backCircle{
     left: 8rem!important;
+  }
+
+  .awesome > :nth-child(1) {
+    width: 100%;
+  }
+  .awesome > :nth-child(2) {
+    width: 100%;
+  }
+  .awesome > :nth-child(3) {
+    width: 100%;
   }
 }

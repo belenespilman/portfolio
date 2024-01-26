@@ -26,23 +26,19 @@ const Works = () => {
             My Most Used
           </span>
           <span>Technologies & Frameworks</span>
-          <spane>
+          <span>
             Lorem ispum is simpley dummy text of printing of printing Lorem
-            <br />
+            
             ispum is simpley dummy text of printingLorem ispum is simpley dummy
             text
             <br />
             y dummy text of printingLorem
             <br />
             ispum is simpley dummy text of printing
-          </spane>
+          </span>
           <Link to="contact" smooth={true} spy={true} className="s-link">
             <button className="button s-button">Let's Talk</button>
           </Link>
-          <div
-            className="blur s-blur1"
-            style={{ background: "#ABF1FF94" }}
-          ></div>
         </div>
 
         {/* right side */}
