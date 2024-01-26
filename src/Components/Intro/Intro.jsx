@@ -1,24 +1,24 @@
-import React, { useContext } from "react";
-import "./Intro.css";
-import Vector1 from "../../img/Vector1.png";
-import Vector2 from "../../img/Vector2.png";
-import boy from "../../img/boy.png";
-import thumbup from "../../img/thumbup.png";
-import crown from "../../img/crown.png";
-import FloatinDiv from "../FloatingDiv/FloatingDiv";
-import Github from "../../img/github.png";
-import LinkedIn from "../../img/linkedin.png";
-import { themeContext } from "../../Context";
-import { motion } from "framer-motion";
-import Resume from './resume.pdf';
+import React, { useContext } from 'react'
+import './Intro.css'
+import Vector1 from '../../img/Vector1.png'
+import Vector2 from '../../img/Vector2.png'
+import boy from '../../img/boy.png'
+import thumbup from '../../img/thumbup.png'
+import crown from '../../img/crown.png'
+import FloatinDiv from '../FloatingDiv/FloatingDiv'
+import Github from '../../img/github.png'
+import LinkedIn from '../../img/linkedin.png'
+import { themeContext } from '../../Context'
+import { motion } from 'framer-motion'
+import Resume from './resume.pdf'
 
 const Intro = () => {
   // Transition
-  const transition = { duration: 2, type: "spring" };
+  const transition = { duration: 2, type: 'spring' }
 
   // context
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
 
   return (
     <div className="Intro" id="Intro">
@@ -26,7 +26,7 @@ const Intro = () => {
       <div className="i-left">
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? "white" : "" }}>Hi there! I Am</span>
+          <span style={{ color: darkMode ? 'white' : '' }}>Hi there! I Am</span>
           <span>Belen Espilman</span>
           <span>
             Frontend Developer with high level of experience in web designing
@@ -41,10 +41,13 @@ const Intro = () => {
         </Link> */}
         {/* social icons */}
         <div className="i-icons">
-          <a href="https://github.com/belenespilman" target={"_blank"}>
+          <a href="https://github.com/belenespilman" target={'_blank'}>
             <img src={Github} alt="" />
           </a>
-          <a href="https://www.linkedin.com/in/belen-espilman/" target={"_blank"}>
+          <a
+            href="https://www.linkedin.com/in/belen-espilman/"
+            target={'_blank'}
+          >
             <img src={LinkedIn} alt="" />
           </a>
         </div>
@@ -57,8 +60,8 @@ const Intro = () => {
         {/* animation */}
 
         <motion.div
-          initial={{ left: "-40%" }}
-          whileInView={{ left: "-24%" }}
+          initial={{ left: '-40%' }}
+          whileInView={{ left: '-24%' }}
           transition={transition}
           className="floating-div"
         >
@@ -66,8 +69,8 @@ const Intro = () => {
         </motion.div>
 
         <motion.div
-          initial={{ top: "-4%", left: "74%" }}
-          whileInView={{ left: "68%" }}
+          initial={{ top: '-4%', left: '74%' }}
+          whileInView={{ left: '68%' }}
           transition={transition}
           className="floating-div"
         >
@@ -76,8 +79,8 @@ const Intro = () => {
 
         {/* animation */}
         <motion.div
-          initial={{ left: "9rem", top: "18rem" }}
-          whileInView={{ left: "0rem" }}
+          initial={{ left: '9rem', top: '18rem' }}
+          whileInView={{ left: '0rem' }}
           transition={transition}
           className="floating-div"
         >
@@ -85,20 +88,23 @@ const Intro = () => {
           <FloatinDiv img={thumbup} text1="Best Design" text2="Award" />
         </motion.div>
 
-        <div className="blur" style={{ background: "rgba(210, 114, 172,.3)" }}></div>
+        <div
+          className="blur"
+          style={{ background: 'rgba(210, 114, 172,.3)' }}
+        ></div>
         <div
           className="blur"
           style={{
-            background: "rgba(45, 158, 243, .3)",
-            top: "17rem",
-            width: "21rem",
-            height: "11rem",
-            left: "-9rem",
+            background: 'rgba(45, 158, 243, .3)',
+            top: '17rem',
+            width: '21rem',
+            height: '11rem',
+            left: '-9rem',
           }}
         ></div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Intro;
+export default Intro

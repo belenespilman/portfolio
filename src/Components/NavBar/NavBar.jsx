@@ -1,18 +1,22 @@
-import React, {useContext} from "react";
-import Toggle from "../Toggle/Toggle";
-import "./Navbar.css";
-import { Link } from "react-scroll";
-import { themeContext } from "../../Context";
+import React, { useContext } from 'react'
+import Toggle from '../Toggle/Toggle'
+import './Navbar.css'
+import { Link } from 'react-scroll'
+import { themeContext } from '../../Context'
 
 const Navbar = () => {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
 
   return (
-    <div className="n-wrapper" id="Navbar"  style={{
-      background: darkMode ? "black" : "white",
-      color: darkMode ? "white" : "black",
-    }}>
+    <div
+      className="n-wrapper"
+      id="Navbar"
+      style={{
+        background: darkMode ? 'black' : 'white',
+        color: darkMode ? 'white' : 'black',
+      }}
+    >
       {/* left */}
       <div className="n-left">
         <Link to="Intro" spy={true} smooth={true} offset={-1000}>
@@ -23,9 +27,15 @@ const Navbar = () => {
       {/* right */}
       <div className="n-right">
         <div className="n-list">
-          <ul style={{ listStyleType: "none" }}>
+          <ul style={{ listStyleType: 'none' }}>
             <li>
-              <Link activeClass="active" to="Intro" spy={true} smooth={true} offset={-1000}>
+              <Link
+                activeClass="active"
+                to="Intro"
+                spy={true}
+                smooth={true}
+                offset={-1000}
+              >
                 Home
               </Link>
             </li>
@@ -51,7 +61,7 @@ const Navbar = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

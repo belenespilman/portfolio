@@ -1,35 +1,35 @@
-import React, { useContext, useRef, useState } from "react";
-import "./Contact.css";
-import emailjs from "@emailjs/browser";
-import { themeContext } from "../../Context";
+import React, { useContext, useRef, useState } from 'react'
+import './Contact.css'
+import emailjs from '@emailjs/browser'
+import { themeContext } from '../../Context'
 import ContactMe from '../../img/contact-me.png'
 
 const Contact = () => {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
-  const form = useRef();
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
+  const form = useRef()
   const [done, setDone] = useState(false)
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     emailjs
       .sendForm(
-        "service_2mu5xtl",
-        "template_m5udu2c",
+        'service_2mu5xtl',
+        'template_m5udu2c',
         form.current,
-        "VLwg1ltOWvnCYAiK_"
+        'VLwg1ltOWvnCYAiK_',
       )
       .then(
         (result) => {
-          console.log(result.text);
-          setDone(true);
-          form.reset();
+          console.log(result.text)
+          setDone(true)
+          form.reset()
         },
         (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+          console.log(error.text)
+        },
+      )
+  }
 
   return (
     <div className="contact-form" id="contact">
@@ -41,20 +41,60 @@ const Contact = () => {
       <div className="c-right">
         <div className="c-title">
           {/* darkMode */}
-          <span style={{color: darkMode?'white': ''}} className="c-title-text">Get in Touch</span>
+          <span
+            style={{ color: darkMode ? 'white' : '' }}
+            className="c-title-text"
+          >
+            Get in Touch
+          </span>
           <span className="c-title-text">Send me an Email!</span>
-          <p className="c-title-text" style={{color: darkMode ? "white": ""}}>I will reply as soon as possible</p>
+          <p
+            className="c-title-text"
+            style={{ color: darkMode ? 'white' : '' }}
+          >
+            I will reply as soon as possible
+          </p>
         </div>
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="user_name" className="user"  placeholder="Your Name" style={{ background: darkMode ? "black": "", color: darkMode ? "white": ""}}/>
-          <input type="email" name="user_email" className="user" placeholder="Your Email" style={{ background: darkMode ? "black": "", color: darkMode ? "white": ""}}/>
-          <textarea name="message" className="user" placeholder="Message" style={{ background: darkMode ? "black": "", color: darkMode ? "white": ""}}/>
-          <input type="submit" value="Send" className="button c-submit-button"/>
-          <span>{done && "Thanks for Contacting me"}</span>
+          <input
+            type="text"
+            name="user_name"
+            className="user"
+            placeholder="Your Name"
+            style={{
+              background: darkMode ? 'black' : '',
+              color: darkMode ? 'white' : '',
+            }}
+          />
+          <input
+            type="email"
+            name="user_email"
+            className="user"
+            placeholder="Your Email"
+            style={{
+              background: darkMode ? 'black' : '',
+              color: darkMode ? 'white' : '',
+            }}
+          />
+          <textarea
+            name="message"
+            className="user"
+            placeholder="Message"
+            style={{
+              background: darkMode ? 'black' : '',
+              color: darkMode ? 'white' : '',
+            }}
+          />
+          <input
+            type="submit"
+            value="Send"
+            className="button c-submit-button"
+          />
+          <span>{done && 'Thanks for Contacting me'}</span>
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
