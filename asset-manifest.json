@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.ab868317.css",
-    "main.js": "/portfolio/static/js/main.3d92b6d3.js",
-    "static/media/ecommerce.png": "/portfolio/static/media/ecommerce.522da76635d52117102b.png",
+    "main.js": "/portfolio/static/js/main.0606e195.js",
+    "static/media/hoc.png": "/portfolio/static/media/hoc.af8bd03db8e21016a668.png",
+    "static/media/musicapp.png": "/portfolio/static/media/musicapp.16d07598a3374312f1f8.png",
+    "static/media/sidebar.png": "/portfolio/static/media/sidebar.41f023169408f56dc5f5.png",
     "static/media/resume.pdf": "/portfolio/static/media/resume.8e263d63e7b6b70a5157.pdf",
-    "static/media/sidebar.png": "/portfolio/static/media/sidebar.b2225070b8adae68d063.png",
-    "static/media/musicapp.png": "/portfolio/static/media/musicapp.f1c301f91904ef5f9249.png",
+    "static/media/ecommerce.png": "/portfolio/static/media/ecommerce.5403f8cbb8c4fd18f3c2.png",
     "static/media/boy.png": "/portfolio/static/media/boy.5ca4b670a32b71681d2c.png",
     "static/media/contact-me.png": "/portfolio/static/media/contact-me.c0b5519131b2c9d761a3.png",
-    "static/media/hoc.png": "/portfolio/static/media/hoc.e6af51fc04c57ae67096.png",
     "static/media/ReactJS.png": "/portfolio/static/media/ReactJS.47321f3acec242d06aab.png",
     "static/media/uiuxCourse.png": "/portfolio/static/media/uiuxCourse.99b694a23ff2a951844f.png",
     "static/media/thumbup.png": "/portfolio/static/media/thumbup.e06790ba656f0397cbe5.png",
@@ -19,10 +19,10 @@
     "static/media/Vector2.png": "/portfolio/static/media/Vector2.7c9484541aec45a4f87f.png",
     "index.html": "/portfolio/index.html",
     "main.ab868317.css.map": "/portfolio/static/css/main.ab868317.css.map",
-    "main.3d92b6d3.js.map": "/portfolio/static/js/main.3d92b6d3.js.map"
+    "main.0606e195.js.map": "/portfolio/static/js/main.0606e195.js.map"
   },
   "entrypoints": [
     "static/css/main.ab868317.css",
-    "static/js/main.3d92b6d3.js"
+    "static/js/main.0606e195.js"
   ]
 }
