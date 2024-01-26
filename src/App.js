@@ -1,5 +1,5 @@
-import Navbar from './components/Navbar/Navbar'
 import Intro from './components/Intro/Intro'
+import Navbar from './components/Navbar/Navbar'
 import Services from './components/Services/Services'
 import './App.css'
 import Works from './components/Works/Works'
