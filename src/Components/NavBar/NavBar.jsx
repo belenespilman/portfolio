@@ -46,7 +46,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="contact" spy={true} smooth={true} offset={-100}>
+        <Link to="contact" spy={true} smooth={true} offset={-80}>
           <button className="button n-button">Contact</button>
         </Link>
       </div>
