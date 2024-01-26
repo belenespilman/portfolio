@@ -15,7 +15,9 @@ const Navbar = () => {
     }}>
       {/* left */}
       <div className="n-left">
-        <div className="n-name">Belén</div>
+        <Link to="Intro" spy={true} smooth={true} offset={-1000}>
+          <div className="n-name">Belén</div>
+        </Link>
         <Toggle />
       </div>
       {/* right */}

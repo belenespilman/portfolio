@@ -1,5 +1,5 @@
 .n-wrapper {
-  height: 10vh;
+  height: 8vh;
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
@@ -23,6 +23,7 @@
 .n-name {
   font-size: 1.3rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .n-right {
