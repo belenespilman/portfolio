@@ -5,10 +5,10 @@
   margin-bottom: 2rem;
   top: 0;
   left: 0;
-  position: fixed; /* Add this line to make the navbar fixed */
+  position: fixed;
   width: 100%;
-  background-color: black; /* Add a background color if needed */
-  z-index: 1000; /* Add a high z-index to ensure it's on top of other elements */
+  background-color: black; 
+  z-index: 1000; 
 }
 
 .n-left {

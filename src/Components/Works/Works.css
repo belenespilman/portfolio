@@ -28,6 +28,11 @@
   font-size: 14px;
   margin-top: 1rem;
 }
+
+.s-link{
+  width: 8rem;
+}
+
 .s-button {
   width: 8rem;
   height: 2rem;

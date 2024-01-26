@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import "./Works.css";
-import Upwork from "../../img/Upwork.png";
-import Fiverr from "../../img/fiverr.png";
-import Amazon from "../../img/amazon.png";
-import Shopify from "../../img/Shopify.png";
-import Facebook from "../../img/Facebook.png";
+
+import ReactJS from '../../img/ReactJS.png'
+import NextJS from '../../img/NextJS.png'
+import Vite from '../../img/Vite.png'
+import Typescript from '../../img/Typescript.png'
+import Tailwind from '../../img/Tailwind.png'
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import {Link} from 'react-scroll'
@@ -22,9 +23,9 @@ const Works = () => {
         <div className="awesome">
           {/* dark Mode */}
           <span style={{ color: darkMode ? "white" : "" }}>
-            Works for All these
+            My Most Used
           </span>
-          <span>Brands & Clients</span>
+          <span>Technologies & Frameworks</span>
           <spane>
             Lorem ispum is simpley dummy text of printing of printing Lorem
             <br />
@@ -35,8 +36,8 @@ const Works = () => {
             <br />
             ispum is simpley dummy text of printing
           </spane>
-          <Link to="contact" smooth={true} spy={true}>
-            <button className="button s-button">Hire Me</button>
+          <Link to="contact" smooth={true} spy={true} className="s-link">
+            <button className="button s-button">Let's Talk</button>
           </Link>
           <div
             className="blur s-blur1"
@@ -55,19 +56,19 @@ const Works = () => {
           className="w-mainCircle"
         >
           <div className="w-secCircle">
-            <img src={Upwork} alt="" />
+            <img src={Typescript} alt="Typescript" />
           </div>
           <div className="w-secCircle">
-            <img src={Fiverr} alt="" />
+            <img src={Vite} alt="Vite" />
           </div>
           <div className="w-secCircle">
-            <img src={Amazon} alt="" />
+            <img src={ReactJS} alt="ReactJS" />
           </div>{" "}
           <div className="w-secCircle">
-            <img src={Shopify} alt="" />
+            <img src={NextJS} alt="NextJS" />
           </div>
           <div className="w-secCircle">
-            <img src={Facebook} alt="" />
+            <img src={Tailwind} alt="TailwindCSS" />
           </div>
         </motion.div>
         {/* background Circles */}
