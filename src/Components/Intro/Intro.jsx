@@ -14,7 +14,7 @@ import Resume from './resume.pdf'
 
 const Intro = () => {
   // Transition
-  const transition = { duration: 2, type: 'spring' }
+  const transition = { duration: 2, type: 'string' }
 
   // context
   const theme = useContext(themeContext)
@@ -30,7 +30,7 @@ const Intro = () => {
           <span>Belen Espilman</span>
           <span>
             Frontend Developer with high level of experience in web designing
-            and development, producting the Quality work.
+            <br/>and development, producting the Quality work.
           </span>
         </div>
         <a href={Resume} download>
@@ -56,16 +56,16 @@ const Intro = () => {
       <div className="i-right">
         <img src={Vector1} alt="" />
         <img src={Vector2} alt="" />
-        <img src={boy} alt="" />
         {/* animation */}
 
         <motion.div
-          initial={{ left: '-40%' }}
-          whileInView={{ left: '-24%' }}
+          initial={{ top: '-15%', left: '-3s%' }}
+          whileInView={{ left: '-10%' }}
           transition={transition}
           className="floating-div"
+          style={{display: 'none'}}
         >
-          <FloatinDiv img={crown} text1="Frontend" text2="Developer" />
+          <FloatinDiv img={crown} text1="Frontend" text2="Developer" style={{display:"none"}}/>
         </motion.div>
 
         <motion.div
@@ -73,19 +73,20 @@ const Intro = () => {
           whileInView={{ left: '68%' }}
           transition={transition}
           className="floating-div"
+          
         >
-          <FloatinDiv img={crown} text1="React" text2="Developer" />
+          <FloatinDiv img={crown} text1="React JS Developer" />
         </motion.div>
 
         {/* animation */}
         <motion.div
-          initial={{ left: '9rem', top: '18rem' }}
+          initial={{ left: '9rem', top: '65%' }}
           whileInView={{ left: '0rem' }}
           transition={transition}
           className="floating-div"
         >
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Best Design" text2="Award" />
+          <FloatinDiv img={thumbup} text1="Front-end" text2="Developer" />
         </motion.div>
 
         <div
