@@ -11,16 +11,18 @@ import { themeContext } from '../../Context'
 const Portfolio = () => {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
+  const isMobile = window.innerWidth <= 480
   return (
     <div className="portfolio" id="portfolio">
       {/* heading */}
       <span style={{ color: darkMode ? 'white' : '' }}>Recent Projects</span>
       <span>My Portfolio</span>
+      <p className='p-swipe-cta' style={{color: darkMode ? "var(--gray)" : ""}}>Swipe right to see more!</p>
 
       {/* slider */}
       <Swiper
-        spaceBetween={30}
-        slidesPerView={3}
+        spaceBetween={isMobile ? 50 : 30}
+        slidesPerView={isMobile ? 1 : 3}
         grabCursor={true}
         className="portfolio-slider"
       >

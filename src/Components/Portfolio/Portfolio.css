@@ -4,7 +4,11 @@
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+}
 
+.p-swipe-cta{
+  margin-top: 0;
+  display: none;
 }
 
 /* heading */
@@ -40,13 +44,19 @@
   gap: 5%;
   filter: drop-shadow(-12px 15px 13px rgba(232, 104, 183, 0.25));
   border-radius: 19px;
-   
 }
 
 
 @media screen and (max-width: 480px){
+  .portfolio{
+    margin-bottom: 8rem;
+  }
   .portfolio img {
-      width: 26rem;     
+      width: 100%;     
+  }
+
+  .p-swipe-cta{
+    display: block;
   }
 }
 

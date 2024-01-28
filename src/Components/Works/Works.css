@@ -130,7 +130,7 @@
 @media screen and (max-width: 480px) {
   .works {
     flex-direction: column;
-    height: 55rem;
+    height: 70rem;
     padding: 0;
     margin: 0;
     gap: 5rem;
