@@ -23,14 +23,12 @@
 /* slider */
 .portfolio .swiper{
     overflow: visible!important;
-  
 }
 
 .portfolio-slider {
   margin-top: 3rem;
   width: 100%;
-  gap: 20rem;
-  
+  gap: 20rem;  
 }
 
 .portfolio-slider .swiper-slide {
@@ -48,9 +46,7 @@
 
 @media screen and (max-width: 480px){
   .portfolio img {
-      width: 26rem;
-      
-      
+      width: 26rem;     
   }
 }
 

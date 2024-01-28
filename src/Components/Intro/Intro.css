@@ -102,16 +102,22 @@
 @media screen and (max-width: 480px) {
   .Intro {
     flex-direction: column;
-    gap: 7rem;
-    height: 64rem;
+    gap: 0rem;
+    height: 130vh;
+    margin-top: 6rem;
   }
 
   .i-right {
-    transform: scale(0.8);
-    left: -3rem;
+    transform: scale(0.7);
+    left: -3.5rem
   }
+
   .i-right .blur {
     display: none;
+  }
+
+  .i-icons{
+    margin-top: 0;
   }
 
 
