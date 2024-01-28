@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+
 }
 
 /* heading */
@@ -22,19 +23,34 @@
 /* slider */
 .portfolio .swiper{
     overflow: visible!important;
+  
 }
 
 .portfolio-slider {
   margin-top: 3rem;
   width: 100%;
+  gap: 20rem;
+  
 }
 
 .portfolio-slider .swiper-slide {
   width: 20rem;
+  margin-right: 5rem;
 }
 .portfolio img {
-  width: 19rem;
-  filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
+  width: 100%;
+  gap: 5%;
+  filter: drop-shadow(-12px 15px 13px rgba(232, 104, 183, 0.25));
   border-radius: 19px;
+   
+}
+
+
+@media screen and (max-width: 480px){
+  .portfolio img {
+      width: 26rem;
+      
+      
+  }
 }
 

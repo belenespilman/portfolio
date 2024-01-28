@@ -2,7 +2,7 @@ import React from 'react'
 
 import './FloatingDiv.css'
 
-const FloatinDiv = ({ img, text1, text2, link}) => {
+const FloatinDiv = ({ img, text1, text2, link }) => {
   return (
     // darkMode
     <div className="floatingDiv">

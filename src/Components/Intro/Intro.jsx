@@ -30,7 +30,8 @@ const Intro = () => {
           <span>Belen Espilman</span>
           <span>
             Frontend Developer with high level of experience in web designing
-            <br/>and development, producting the Quality work.
+            <br />
+            and development, producting the Quality work.
           </span>
         </div>
         <a href={Resume} download>
@@ -63,9 +64,14 @@ const Intro = () => {
           whileInView={{ left: '-10%' }}
           transition={transition}
           className="floating-div"
-          style={{display: 'none'}}
+          style={{ display: 'none' }}
         >
-          <FloatinDiv img={crown} text1="Frontend" text2="Developer" style={{display:"none"}}/>
+          <FloatinDiv
+            img={crown}
+            text1="Frontend"
+            text2="Developer"
+            style={{ display: 'none' }}
+          />
         </motion.div>
 
         <motion.div
@@ -73,7 +79,6 @@ const Intro = () => {
           whileInView={{ left: '68%' }}
           transition={transition}
           className="floating-div"
-          
         >
           <FloatinDiv img={crown} text1="React JS Developer" />
         </motion.div>
