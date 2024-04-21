@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.0f8a5bfe.css",
-    "main.js": "/portfolio/static/js/main.e25467c9.js",
+    "main.css": "/portfolio/static/css/main.d289272f.css",
+    "main.js": "/portfolio/static/js/main.36e43386.js",
     "static/media/hoc.png": "/portfolio/static/media/hoc.af8bd03db8e21016a668.png",
     "static/media/shopi.png": "/portfolio/static/media/shopi.48a66f5076739145ea5c.png",
     "static/media/Vector2.png": "/portfolio/static/media/Vector2.77ab63d2ac7817bbc78f.png",
+    "static/media/musicapp.png": "/portfolio/static/media/musicapp.16d07598a3374312f1f8.png",
     "static/media/sidebar.png": "/portfolio/static/media/sidebar.41f023169408f56dc5f5.png",
     "static/media/resume.pdf": "/portfolio/static/media/resume.8e263d63e7b6b70a5157.pdf",
-    "static/media/ecommerce.png": "/portfolio/static/media/ecommerce.5403f8cbb8c4fd18f3c2.png",
-    "static/media/musicapp.png": "/portfolio/static/media/musicapp.03e3348b5f3e72dc0a7e.png",
     "static/media/contact-me.png": "/portfolio/static/media/contact-me.657d0a8d49ddda05933a.png",
     "static/media/boy.png": "/portfolio/static/media/boy.233c21375ccca4316a5e.png",
+    "static/media/ecommerce.png": "/portfolio/static/media/ecommerce.83c3a8c039b5f3db5079.png",
     "static/media/ReactJS.png": "/portfolio/static/media/ReactJS.47321f3acec242d06aab.png",
     "static/media/uiuxCourse.png": "/portfolio/static/media/uiuxCourse.99b694a23ff2a951844f.png",
     "static/media/thumbup.png": "/portfolio/static/media/thumbup.e06790ba656f0397cbe5.png",
@@ -19,11 +19,11 @@
     "static/media/wave.png": "/portfolio/static/media/wave.9a2f1e44a5c1035efac5.png",
     "static/media/OopCourse.png": "/portfolio/static/media/OopCourse.84876be899545e60732d.png",
     "index.html": "/portfolio/index.html",
-    "main.0f8a5bfe.css.map": "/portfolio/static/css/main.0f8a5bfe.css.map",
-    "main.e25467c9.js.map": "/portfolio/static/js/main.e25467c9.js.map"
+    "main.d289272f.css.map": "/portfolio/static/css/main.d289272f.css.map",
+    "main.36e43386.js.map": "/portfolio/static/js/main.36e43386.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f8a5bfe.css",
-    "static/js/main.e25467c9.js"
+    "static/css/main.d289272f.css",
+    "static/js/main.36e43386.js"
   ]
 }
