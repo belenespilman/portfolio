@@ -7,7 +7,7 @@ import Ecommerce from '../../img/ecommerce.png'
 import HOC from '../../img/hoc.png'
 import MusicApp from '../../img/musicapp.png'
 import { themeContext } from '../../Context'
-import '../../img/shopi.png' 
+import Shopi from '../../img/shopi.png' 
 
 const Portfolio = () => {
   const theme = useContext(themeContext)
@@ -30,6 +30,7 @@ const Portfolio = () => {
         <SwiperSlide>
           <a
             href="https://react-nextjs-travel-app-landing.vercel.app/"
+            target={'_blank'}
             
           >
             <img src={Sidebar} alt="" />
@@ -37,14 +38,16 @@ const Portfolio = () => {
         </SwiperSlide>
         <SwiperSlide>
           <a
-            href="https://github.com/belenespilman/e-commerce-html-css-js"
+            href="https://notes-app-frontend-liard-three.vercel.app/"
+            target={'_blank'}
             
           >
-            <img src={Ecommerce} alt="HTML, CSS y JavaScript E-Commerce" />
+            <img src={Ecommerce} alt="FullStack Notes App - React & NestJS" />
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://belenespilman.github.io/todo-app/">
+          <a href="https://belenespilman.github.io/todo-app/"
+          target={'_blank'}>
             <img src={MusicApp} alt="ToDO APP" />
           </a>
         </SwiperSlide>
@@ -61,7 +64,8 @@ const Portfolio = () => {
             href="https://e-commerce-react-tailwind.vercel.app/"
             target={'_blank'}
           >
-            <img src='img/shopi.png' alt="Shopi, ReactJS & Vite e-commerce" />
+            <img src={Shopi} alt="Shopi, ReactJS & Vite e-commerce"
+             />
           </a>
         </SwiperSlide>
       </Swiper>
