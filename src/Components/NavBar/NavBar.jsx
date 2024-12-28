@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Toggle from '../Toggle/Toggle'
-import './Navbar.css'
+import '../NavBar/NavBar.css'
 import { Link } from 'react-scroll'
 import { themeContext } from '../../Context'
 

@@ -3,54 +3,58 @@ import './Intro.css'
 import Vector1 from '../../img/Vector1.png'
 import Vector2 from '../../img/Vector2.png'
 import boy from '../../img/boy.png'
-import thumbup from '../../img/thumbup.png'
-import crown from '../../img/crown.png'
+import thumbup from '../../img/plane.png'
+import crown from '../../img/lamp.png'
 import FloatinDiv from '../FloatingDiv/FloatingDiv'
 import Github from '../../img/github.png'
 import LinkedIn from '../../img/linkedin.png'
 import { themeContext } from '../../Context'
-import { motion } from 'framer-motion'
+import { motion, transform } from 'framer-motion'
 import Resume from './resume.pdf'
 
 const Intro = () => {
-  // Transition
   const transition = { duration: 2, type: 'string' }
 
-  // context
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
 
   return (
     <div className="Intro" id="Intro">
-      {/* left name side */}
       <div className="i-left">
         <div className="i-name">
-          {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? 'white' : '' }}>Hi there! I Am</span>
-          <span>Belen Espilman</span>
-          <span>
-            Frontend Developer with high level of experience in web designing
+          <span style={{ color: darkMode ? 'white' : '' }}>Hey there!</span>
+          <span>Welcome to my creative corner!</span>
+          <span
+            style={{
+              color: darkMode ? 'white' : 'black',
+              fontSize: 'medium',
+              marginLeft: '6px',
+            }}
+          >
+            I'm Belen, a coffee-fueled Full Stack Developer.
+            <br /> I build digital solutions that blend design and
+            functionality.
             <br />
-            and development, producting the Quality work.
+            Dive into my projects and let’s bring great ideas to life!
           </span>
         </div>
-        <a href={Resume} download>
-          <button className="button i-button">Download my CV</button>
-        </a>
-        {/* <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">Get In Touch</button>
-        </Link> */}
-        {/* social icons */}
-        <div className="i-icons">
-          <a href="https://github.com/belenespilman" target={'_blank'}>
-            <img src={Github} alt="" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/belen-espilman/"
-            target={'_blank'}
-          >
-            <img src={LinkedIn} alt="" />
-          </a>
+        <div style={{ display: 'flex', marginTop: '24px' }}>
+          <div>
+            <a href={Resume} download>
+              <button className="button i-button">Download my CV</button>
+            </a>
+          </div>
+          <div className="i-icons">
+            <a href="https://github.com/belenespilman" target={'_blank'}>
+              <img src={Github} alt="" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/belen-espilman/"
+              target={'_blank'}
+            >
+              <img src={LinkedIn} alt="" />
+            </a>
+          </div>
         </div>
       </div>
       {/* right image side */}
@@ -75,23 +79,23 @@ const Intro = () => {
         </motion.div>
 
         <motion.div
-          initial={{ top: '-4%', left: '74%' }}
-          whileInView={{ left: '68%' }}
+          initial={{ top: '-6%', left: '95%' }}
+          whileInView={{ left: '80%' }}
           transition={transition}
-          className="floating-div"
+          className="floating-div crown"
         >
-          <FloatinDiv img={crown} text1="React JS Developer" />
+          {!darkMode && <FloatinDiv style={{}} img={crown} />}
         </motion.div>
 
         {/* animation */}
         <motion.div
-          initial={{ left: '9rem', top: '65%' }}
+          initial={{ left: '10rem', top: '65%' }}
           whileInView={{ left: '0rem' }}
           transition={transition}
-          className="floating-div"
+          className="floating-div thumbup"
         >
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Front-end" text2="Developer" />
+          <FloatinDiv img={thumbup} />
         </motion.div>
 
         <div

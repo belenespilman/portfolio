@@ -11,17 +11,13 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 
 const Works = () => {
-  // context
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
 
-  // transition
   return (
     <div className="works" id="works">
-      {/* left side */}
       <div className="w-left">
         <div className="awesome">
-          {/* dark Mode */}
           <span style={{ color: darkMode ? 'white' : '' }}>My Most Used</span>
           <span>Technologies & Frameworks</span>
           <span>

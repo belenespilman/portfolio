@@ -2,11 +2,12 @@
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: -7rem;
+  margin-top: 120px;
   margin-bottom: 0;
+  height: 246px;
 }
 
-.wave{
+.wave {
   width: 100hv;
   margin-left: -20rem;
 }
@@ -18,27 +19,28 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 4rem;
+  margin: 0;
   gap: 4rem;
-  margin-top: 4rem;
+
   color: white;
 }
 .f-icons {
+  margin: 0;
   display: flex;
   gap: 2rem;
 }
 
-@media screen and (max-width: 480px){
-  .f-content{
-    transform: scale(.5);
+@media screen and (max-width: 480px) {
+  .f-content {
+    transform: scale(0.5);
   }
 
-  .footer{
+  .footer {
     margin-top: 5rem;
     height: 10rem;
   }
 
-  .f-content{
+  .f-content {
     margin-top: 0;
   }
 }

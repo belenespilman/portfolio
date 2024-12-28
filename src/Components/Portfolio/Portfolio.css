@@ -1,14 +1,16 @@
 .portfolio {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  margin-top: 6rem;
+  padding: 20px;
 }
 
-.p-swipe-cta{
+.p-swipe-cta {
   margin-top: 0;
-  display: none;
 }
 
 /* heading */
@@ -25,38 +27,45 @@
 }
 
 /* slider */
-.portfolio .swiper{
-    overflow: visible!important;
+.portfolio .swiper {
+  overflow: visible !important;
+  width: 100vw; /* Asegura que el Swiper ocupe todo el ancho disponible */
+  margin-left: calc(-5px); /* Compensa el padding de la izquierda */
+  margin-right: calc(-5px);
+  padding-left: 48px; /* Agrega un pequeño padding en el lado izquierdo */
+  padding-right: 48px;
+  box-sizing: border-box;
 }
 
 .portfolio-slider {
   margin-top: 3rem;
-  width: 100%;
-  gap: 20rem;  
+  width: 100vw;
 }
 
 .portfolio-slider .swiper-slide {
-  width: 20rem;
-  margin-right: 5rem;
+  width: 100%;
 }
 .portfolio img {
   width: 100%;
-  gap: 5%;
-  filter: drop-shadow(-12px 15px 13px rgba(232, 104, 183, 0.25));
+  gap: 0;
+  filter: drop-shadow(-12px 15px 13px rgba(75, 42, 62, 0.25));
   border-radius: 19px;
 }
 
-
-@media screen and (max-width: 480px){
-  .portfolio{
+@media screen and (max-width: 480px) {
+  .portfolio {
+    margin-top: 15rem;
     margin-bottom: 8rem;
   }
   .portfolio img {
-      width: 100%;     
+    width: 100%;
   }
 
-  .p-swipe-cta{
+  .p-swipe-cta {
     display: block;
   }
-}
 
+  .portfolio-slider .swiper-slide {
+    width: 100%;
+  }
+}

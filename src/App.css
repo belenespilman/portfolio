@@ -1,35 +1,33 @@
-*{
-  font-family: "Poppins";
+* {
+  font-family: 'Poppins';
   font-weight: normal;
   font-size: 20px;
 }
 
-
-
-body{
+body {
   margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-:root
-{
-  --yellow: #F5C32C;
-  --orange : #FCA61F;
-  --black : #242D49;
-  --gray : #788097;
-  --blueCard : #DDF8FE;
+:root {
+  --black: #242d49;
+  --gray: #788097;
+  --blueCard: #ddf8fe;
   --purple: rgb(238 210 255);
-  --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
-  --orangeCard: rgba(252, 166, 31, 0.45);
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
 
   --main: #d272ac;
-  --mainCard: rgba(210, 114, 172, .5)
+  --mainCard: rgba(210, 114, 172, 0.5);
 }
 
-.App{
-    padding: 0.5rem 3.5rem;
-    overflow: hidden;
-    color: var(--black);    
+.App {
+  margin: 0;
+  padding: 0.5rem 3.5rem 0.5rem 3.5rem;
+  overflow: hidden;
+  color: var(--black);
 }
 
 .button {
@@ -40,10 +38,10 @@ body{
   font-size: 16px;
   padding: 11px 26px 11px 26px;
 }
-  
+
 .button:hover {
   transform: scale(1.05);
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   cursor: pointer;
 }
 
@@ -53,8 +51,8 @@ body{
   }
 }
 
-@media screen and (min-width: 1300px){
-  .App{
+@media screen and (min-width: 1300px) {
+  .App {
     padding: 0rem 12rem;
   }
 }

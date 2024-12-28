@@ -7,7 +7,7 @@
   left: 0;
   position: fixed;
   width: 100%;
-  background-color: black; 
+  background-color: black;
   z-index: 1000;
 }
 
@@ -44,6 +44,8 @@
 .n-list > ul :hover {
   color: var(--main);
   cursor: pointer;
+  transform: scale(1.1);
+  transition-duration: 0.2s;
 }
 
 .n-button {
@@ -55,11 +57,11 @@
     display: none;
   }
 
-  .n-left{
+  .n-left {
     padding-left: 1rem;
   }
 
-  .n-right{
+  .n-right {
     padding-right: 1rem;
   }
 }

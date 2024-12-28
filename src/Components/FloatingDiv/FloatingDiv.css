@@ -1,20 +1,23 @@
 .floatingDiv {
-  justify-content:space-around;
-  background: white;
+  justify-content: space-around;
+  background: transparent;
   box-shadow: none;
   border-radius: 17px;
   display: flex;
   align-items: center;
   padding: 0px 28px 0px 0px;
   height: 3.5rem;
-  
 }
-.floatingDiv > img {
-  transform: scale(0.3);
+.crown .floatingDiv > img {
+  transform: scale(0.6);
+}
+
+.thumbup .floatingDiv > img {
+  transform: scale(1.1);
+  margin-top: 7rem;
 }
 .floatingDiv > span {
-  font-family: "poppins";
+  font-family: 'poppins';
   font-size: 16px;
   color: black;
 }
-

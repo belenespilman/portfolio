@@ -9,10 +9,10 @@ const Footer = () => {
     <div className="footer">
       <img src={Wave} alt="" className="wave" />
       <div className="f-content">
-        <span>belenespilman@gmail.com</span>
+        <span>belen.espilman@gmail.com</span>
         <div className="f-icons">
           <a
-            href="https://www.linkedin.com/in/belen-espilman/"
+            href="https://www.linkedin.com/in/belenespilman/"
             target={'_blank'}
           >
             <Linkedin color="white" size={'3rem'} />

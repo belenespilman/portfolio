@@ -1,10 +1,15 @@
 .Intro {
   display: flex;
   height: 77vh;
-  margin-top: 14rem;
+  margin-top: 8rem;
 }
 
-@media screen and (max-width: 1500px){
+.IntroLetter {
+  color: black;
+  font-size: large;
+}
+
+@media screen and (max-width: 1500px) {
   .Intro {
     margin-top: 9rem;
   }
@@ -14,7 +19,6 @@
   }
 }
 
-
 /* left side styling */
 .i-left {
   display: flex;
@@ -22,6 +26,7 @@
   flex: 1;
   flex-direction: column;
   gap: 2rem;
+  margin: 0;
 }
 .i-name {
   display: flex;
@@ -45,15 +50,25 @@
   margin-top: 10px;
 }
 .i-icons {
-  margin-top: 3rem;
+  margin: 0;
   display: flex;
-  gap: 0rem;
+  justify-content: flex-start;
+  position: relative;
+  margin-top: -28px;
 }
 .i-icons > * {
   transform: scale(0.5);
 }
 .i-icons > *:hover {
   cursor: pointer;
+  transform: scale(0.5);
+  transition-duration: 0.2s;
+}
+
+.i-button {
+  margin: 0;
+  transform: none;
+  margin-right: 16px;
 }
 /* right side styling */
 .i-right {
@@ -109,20 +124,19 @@
 
   .i-right {
     transform: scale(0.7);
-    left: -3.5rem
+    right: 4.5rem;
+    width: 50%;
   }
 
   .i-right .blur {
     display: none;
   }
 
-  .i-icons{
+  .i-icons {
     margin-top: 0;
   }
 
-
-  .floating-div:nth-of-type(1){
-    /* display: none; */
-    top: -7rem !important;;
+  .floating-div {
+    display: none;
   }
 }
