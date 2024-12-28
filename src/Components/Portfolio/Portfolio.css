@@ -32,8 +32,8 @@
   width: 100vw; /* Asegura que el Swiper ocupe todo el ancho disponible */
   margin-left: calc(-5px); /* Compensa el padding de la izquierda */
   margin-right: calc(-5px);
-  padding-left: 48px; /* Agrega un pequeño padding en el lado izquierdo */
-  padding-right: 48px;
+  padding-left: 64px; /* Agrega un pequeño padding en el lado izquierdo */
+  padding-right: 64px;
   box-sizing: border-box;
 }
 
@@ -51,6 +51,55 @@
   filter: drop-shadow(-12px 15px 13px rgba(75, 42, 62, 0.25));
   border-radius: 19px;
 }
+/* Estilos para los botones de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+  font-size: large;
+  color: rgba(90, 87, 89, 0.4) !important;
+  border-radius: 70% !important; /* Flechas redondeadas */
+  padding: 10px;
+  z-index: 10; /* Asegúrate de que las flechas estén por encima del contenido */
+  cursor: pointer;
+}
+
+.swiper-button-prev:hover {
+  color: rgba(102, 97, 100, 0.5) !important;
+  transform: scale(1.6);
+  transition: 0.4s;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 60px !important; /* Tamaño de las flechas */
+  font-weight: bold;
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0); /* posición inicial */
+  }
+  50% {
+    transform: translateX(10px); /* mueve la flecha un poco a la derecha */
+  }
+  100% {
+    transform: translateX(0); /* vuelve a la posición original */
+  }
+}
+
+.swiper-button-next {
+  animation: moveArrow 1.2s ease-in-out infinite;
+  color: rgba(102, 97, 100, 0.5);
+}
+
+.swiper-button-next:hover {
+  animation: none;
+  transform: scale(1.6);
+  transition: 0.7s !important;
+}
+
+.swiper-button-next.no-animation {
+  animation: none;
+}
 
 @media screen and (max-width: 480px) {
   .portfolio {
@@ -67,5 +116,10 @@
 
   .portfolio-slider .swiper-slide {
     width: 100%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
   }
 }

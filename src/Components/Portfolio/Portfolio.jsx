@@ -1,24 +1,40 @@
 import React, { useContext } from 'react'
+import { useState } from 'react'
 import './Portfolio.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
+import { Navigation } from 'swiper'
+import 'swiper/swiper-bundle.min.css'
 import Sidebar from '../../img/sidebar.png'
 import Ecommerce from '../../img/ecommerce.png'
 import HOC from '../../img/hoc.png'
 import MusicApp from '../../img/musicapp.png'
 import { themeContext } from '../../Context'
-import Shopi from '../../img/shopi.png' 
+import Shopi from '../../img/shopi.png'
 
 const Portfolio = () => {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
   const isMobile = window.innerWidth <= 480
+
+  const [isAnimating, setIsAnimating] = useState(true)
+
+  const handleSlideChange = (Swiper) => {
+    if (Swiper.isEnd) {
+      setIsAnimating(false)
+    }
+    setIsAnimating(true)
+  }
   return (
     <div className="portfolio" id="portfolio">
       {/* heading */}
       <span style={{ color: darkMode ? 'white' : '' }}>Recent Projects</span>
       <span>My Portfolio</span>
-      <p className='p-swipe-cta' style={{color: darkMode ? "var(--gray)" : ""}}>Swipe right to see more!</p>
+      <p
+        className="p-swipe-cta"
+        style={{ color: darkMode ? 'var(--gray)' : '' }}
+      >
+        Swipe right to see more!
+      </p>
 
       {/* slider */}
       <Swiper
@@ -26,12 +42,14 @@ const Portfolio = () => {
         slidesPerView={isMobile ? 1 : 3}
         grabCursor={true}
         className="portfolio-slider"
+        navigation={true}
+        modules={[Navigation]}
+        onSlideChange={handleSlideChange}
       >
         <SwiperSlide>
           <a
             href="https://react-nextjs-travel-app-landing.vercel.app/"
             target={'_blank'}
-            
           >
             <img src={Sidebar} alt="" />
           </a>
@@ -40,14 +58,12 @@ const Portfolio = () => {
           <a
             href="https://notes-app-frontend-liard-three.vercel.app/"
             target={'_blank'}
-            
           >
             <img src={Ecommerce} alt="FullStack Notes App - React & NestJS" />
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://belenespilman.github.io/todo-app/"
-          target={'_blank'}>
+          <a href="https://belenespilman.github.io/todo-app/" target={'_blank'}>
             <img src={MusicApp} alt="ToDO APP" />
           </a>
         </SwiperSlide>
@@ -64,8 +80,7 @@ const Portfolio = () => {
             href="https://e-commerce-react-tailwind.vercel.app/"
             target={'_blank'}
           >
-            <img src={Shopi} alt="Shopi, ReactJS & Vite e-commerce"
-             />
+            <img src={Shopi} alt="Shopi, ReactJS & Vite e-commerce" />
           </a>
         </SwiperSlide>
       </Swiper>
