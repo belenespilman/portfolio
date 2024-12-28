@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-import { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Portfolio.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper'
@@ -18,12 +17,20 @@ const Portfolio = () => {
 
   const [isAnimating, setIsAnimating] = useState(true)
 
-  const handleSlideChange = (Swiper) => {
-    if (Swiper.isEnd) {
-      setIsAnimating(false)
-    }
-    setIsAnimating(true)
+  const handleSlideChange = (swiper) => {
+    setIsAnimating(!swiper.isEnd) // Detener animación si estás en el último slide
   }
+
+  useEffect(() => {
+    const nextArrow = document.querySelector('.swiper-button-next')
+    if (nextArrow) {
+      if (isAnimating) {
+        nextArrow.style.animation = 'moveArrow 1.2s ease-in-out infinite'
+      } else {
+        nextArrow.style.animation = 'none'
+      }
+    }
+  }, [isAnimating])
   return (
     <div className="portfolio" id="portfolio">
       {/* heading */}
