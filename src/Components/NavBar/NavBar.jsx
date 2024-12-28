@@ -7,14 +7,17 @@ import { themeContext } from '../../Context'
 const Navbar = () => {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
-
+  const colors = {
+    lightBackground: '#f5e6f9',
+    black: '#242d49',
+  }
   return (
     <div
       className="n-wrapper"
       id="Navbar"
       style={{
-        background: darkMode ? 'black' : 'white',
-        color: darkMode ? 'white' : 'black',
+        background: darkMode ? 'black' : colors.lightBackground,
+        color: darkMode ? 'white' : colors.black,
       }}
     >
       {/* left */}

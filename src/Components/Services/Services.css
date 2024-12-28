@@ -16,22 +16,6 @@
   /* gap: 20px; */
 }
 
-.awesome > :nth-child(1) {
-  color: var(--black);
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-.awesome > :nth-child(2) {
-  color: var(--orange);
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-.awesome > :nth-child(3) {
-  color: var(--gray);
-  font-size: 14px;
-  margin-top: 1rem;
-  width: 80%;
-}
 .s-button {
   width: 8rem;
   height: 2rem;
@@ -46,7 +30,6 @@
   position: absolute;
 }
 
-
 @media screen and (max-width: 480px) {
   .services {
     margin-top: 0;
@@ -57,7 +40,7 @@
     padding: 0;
   }
 
-  .awesome{
+  .awesome {
     width: 100%;
   }
 

@@ -4,6 +4,7 @@ import Card from '../Card/Card'
 import ReactCourse from '../../img/ReactCourse.png'
 import OopCourse from '../../img/OopCourse.png'
 import UiUxCourse from '../../img/uiuxCourse.png'
+import '@fortawesome/fontawesome-free'
 
 import { themeContext } from '../../Context'
 import { motion } from 'framer-motion'
@@ -26,15 +27,24 @@ const Services = () => {
         {/* dark mode */}
         <span style={{ color: darkMode ? 'white' : '' }}>Some of My</span>
         <span>Finished Courses</span>
-        <span style={{ color: darkMode ? 'rgba(255,255,255,.8)' : '' }}>
-          I successfully undertook several professional courses
-          <br /> that enhanced my expertise in Web Development.
+        <span
+          style={{ color: darkMode ? 'rgba(255,255,255,.8)' : 'var(--black)' }}
+        >
+          <i class="fas fa-book"></i> I have successfully completed several
+          professional courses
+          <br /> that significantly enhanced my expertise in Web Development.
           <br />
-          These included training in React.js, TailWind, Vite, Next,
+          <i class="fas fa-rocket"></i> These courses covered a wide range of
+          modern technologies,
+          <br /> including React.js, Tailwind CSS, Vite, Next.js,
           <br />
-          JavaScript, and other cutting-edge technologies.
+          JavaScript, and other industry-leading tools.
         </span>
-        <a href={'https://platzi.com/p/belen.espilman/'} target="_blank">
+        <a
+          href={'https://platzi.com/p/belen.espilman/'}
+          target="_blank"
+          style={{ textDecoration: 'none' }}
+        >
           <button className="button s-button">See More</button>
         </a>
       </div>
@@ -43,14 +53,14 @@ const Services = () => {
         {/* first card */}
         <motion.div
           initial={{ left: '25rem' }}
-          whileInView={{ left: '18rem' }}
+          whileInView={{ left: '15rem' }}
           transition={transition}
         >
           <Card
             logo={ReactCourse}
             heading={'ReactJS'}
             darkMode={darkMode}
-            detail={'Components, Props, CSS, States, Effect, Context, Portals.'}
+            detail={'Components, Props, States, Effect, Context, Portals.'}
           />
         </motion.div>
         {/* second card */}
@@ -77,7 +87,6 @@ const Services = () => {
             darkMode={darkMode}
             heading={'UI/UX'}
             detail={'Fundamental principles of UI design for digital products.'}
-            color="rgba(252, 166, 31, 0.45)"
           />
         </motion.div>
       </div>

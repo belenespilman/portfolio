@@ -5,12 +5,13 @@
   justify-content: center;
   flex-direction: column;
   height: 70vh;
-  margin-top: 6rem;
+  margin-top: 3rem;
   padding: 20px;
 }
 
 .p-swipe-cta {
   margin-top: 0;
+  margin-bottom: -24px;
 }
 
 /* heading */
@@ -18,12 +19,15 @@
   color: var(--black);
   font-size: 2rem;
   font-weight: bold;
+  margin-bottom: -10px;
+  margin-top: -10px;
 }
 
 .portfolio span:nth-of-type(2) {
   color: var(--main);
   font-size: 2.5rem;
   font-weight: bold;
+  margin-bottom: 0;
 }
 
 /* slider */
@@ -38,7 +42,7 @@
 }
 
 .portfolio-slider {
-  margin-top: 3rem;
+  margin-top: 4rem;
   width: 100vw;
 }
 

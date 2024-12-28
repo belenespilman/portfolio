@@ -9,6 +9,7 @@ import Tailwind from '../../img/Tailwind.png'
 import { themeContext } from '../../Context'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 const Works = () => {
   const theme = useContext(themeContext)
@@ -20,17 +21,22 @@ const Works = () => {
         <div className="awesome">
           <span style={{ color: darkMode ? 'white' : '' }}>My Most Used</span>
           <span>Technologies & Frameworks</span>
-          <span>
-            Among the frameworks I have frequently employed are React Js and its
-            associated technologies Vite and Next JS.
+          <span style={{ color: 'var(--black)' }}>
+            <i class="fas fa-laptop-code"></i> I have extensive experience
+            working with modern frameworks such as React.js, along with its
+            complementary tools like Vite and Next.js.
             <br />
-            Furthermore, I possess experience in project implementation
-            utilizing Tailwind and TypeScript.
+            <i class="fas fa-paint-brush"></i> My expertise also includes
+            implementing projects using Tailwind CSS and TypeScript, ensuring
+            visually appealing and efficient designs.
             <br />
-            Not confined solely to frontend development, my proficiency extends
-            to the backend domain,
+            <i class="fas fa-server"></i> Beyond frontend development, I am
+            equally skilled in backend technologies, with a strong foundation in
+            Node.js and related ecosystems.
             <br />
-            incorporating expertise in technologies such as Node.js.
+            <i class="fas fa-database"></i>Additionally, I am proficient in
+            database management, having worked with both relational databases
+            like PostgreSQL and non-relational databases such as MongoDB.
           </span>
           <Link to="contact" smooth={true} spy={true} className="s-link">
             <button className="button s-button">Let's Talk</button>
