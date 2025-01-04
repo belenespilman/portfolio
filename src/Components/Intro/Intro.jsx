@@ -11,6 +11,7 @@ import LinkedIn from '../../img/linkedin.png'
 import { themeContext } from '../../Context'
 import { motion, transform } from 'framer-motion'
 import Resume from './resume.pdf'
+import TypingEffect from '../Animations/TypingEffect/TypingEffect'
 
 const Intro = () => {
   const transition = { duration: 2, type: 'string' }
@@ -24,24 +25,18 @@ const Intro = () => {
         <div className="i-name">
           <span style={{ color: darkMode ? 'white' : '' }}>Hey there!</span>
           <span>Welcome to my creative corner!</span>
-          <span
-            style={{
-              color: darkMode ? 'white' : 'black',
-              fontSize: 'medium',
-              marginLeft: '6px',
-            }}
-          >
-            I'm Belen, a coffee-fueled Full Stack Developer.
-            <br /> I build digital solutions that blend design and
-            functionality.
-            <br />
-            Dive into my projects and let’s bring great ideas to life!
+          <span>
+            <TypingEffect />
           </span>
         </div>
-        <div style={{ display: 'flex', marginTop: '24px' }}>
+        <div className="sticky-container">
           <div>
             <a href={Resume} download>
-              <button className="button i-button">Download my CV</button>
+              <button
+                className={` button i-button ${darkMode ? 'dark-mode' : ''}`}
+              >
+                Download my CV
+              </button>
             </a>
           </div>
           <div className="i-icons">

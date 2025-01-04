@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Toggle from '../Toggle/Toggle'
 import '../NavBar/NavBar.css'
 import { Link } from 'react-scroll'
@@ -8,15 +8,36 @@ const Navbar = () => {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
   const colors = {
-    lightBackground: '#f5e6f9',
+    background: '#f5eaf8',
     black: '#242d49',
   }
+
+  const [showNavbar, setShowNavbar] = useState(true)
+  let lastScrollY = 0
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      if (currentScrollY > lastScrollY) {
+        setShowNavbar(false)
+      } else {
+        setShowNavbar(true)
+      }
+
+      lastScrollY = currentScrollY
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <div
-      className="n-wrapper"
+      className={`n-wrapper ${showNavbar ? 'visible' : 'hidden'}`}
       id="Navbar"
       style={{
-        background: darkMode ? 'black' : colors.lightBackground,
+        background: darkMode ? 'black' : colors.background,
         color: darkMode ? 'white' : colors.black,
       }}
     >

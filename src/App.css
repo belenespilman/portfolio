@@ -21,6 +21,7 @@ body {
 
   --main: #d272ac;
   --mainCard: rgba(210, 114, 172, 0.5);
+  --background: #f5eaf8;
 }
 
 .App {
@@ -28,14 +29,11 @@ body {
   padding: 0.5rem 3.5rem 0.5rem 3.5rem;
   overflow: hidden;
   color: var(--black);
-  background-color: #f5e6f9;
+  background-color: var(--background);
 }
 
 .button {
-  background: linear-gradient(180deg, #c1669d 26.71%, #d272ac 99.36%);
-  border-radius: 34px;
-  border: none;
-  color: white;
+  border-radius: 6px;
   font-size: 16px;
   padding: 11px 26px 11px 26px;
   text-decoration: none;

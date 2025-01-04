@@ -7,8 +7,18 @@
   left: 0;
   position: fixed;
   width: 100%;
-  background-color: #e6f3f8;
+  background-color: (var(--background));
   z-index: 1000;
+}
+
+.n-wrapper.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.n-wrapper.visible {
+  transform: translateY(0);
+  transition: transform 0.8s ease-in-out;
 }
 
 .n-left {
@@ -50,6 +60,10 @@
 
 .n-button {
   flex: 2;
+  height: 44px;
+  color: white;
+  background-color: var(--main);
+  border: none;
 }
 
 @media screen and (max-width: 480px) {

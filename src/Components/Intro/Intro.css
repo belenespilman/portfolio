@@ -25,13 +25,12 @@
   position: relative;
   flex: 1;
   flex-direction: column;
-  gap: 2rem;
   margin: 0;
 }
 .i-name {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  line-height: 1.3;
 }
 .i-name > :nth-child(1) {
   color: var(--black);
@@ -43,32 +42,53 @@
   font-weight: bold;
   font-size: 3rem;
 }
-.i-name > :nth-child(3) {
-  font-weight: 100;
-  font-size: 14px;
-  color: var(--gray);
-  margin-top: 10px;
-}
+
 .i-icons {
+  position: relative;
   margin: 0;
   display: flex;
   justify-content: flex-start;
-  position: relative;
-  margin-top: -28px;
+  z-index: 1000;
 }
 .i-icons > * {
   transform: scale(0.5);
 }
 .i-icons > *:hover {
   cursor: pointer;
-  transform: scale(0.5);
-  transition-duration: 0.2s;
+  transform: scale(0.6);
+  transition-duration: 0.4s;
 }
 
+.sticky-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-70%) translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre el botón y los íconos */
+  z-index: 1000;
+  margin-top: 10rem; /* Ajusta para que el contenido no se solape */
+  /* Quitamos el fixed */
+}
 .i-button {
   margin: 0;
-  transform: none;
-  margin-right: 16px;
+  color: #d272ac;
+  font-weight: 700;
+  background-color: #f5eaf8;
+  border-color: #d272ac;
+  border-width: 3px;
+  border-style: solid;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 11px 26px;
+  max-height: fit-content;
+}
+
+.i-button.dark-mode {
+  background-color: black;
+  color: var(--main);
+  border-color: var(--main);
 }
 /* right side styling */
 .i-right {
