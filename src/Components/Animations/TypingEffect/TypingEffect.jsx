@@ -14,11 +14,14 @@ const TypingEffect = () => {
   }, [darkMode])
   return (
     <div className="typing-container">
-      <h1 className="typing-text">
+      <h1
+        className="typing-text"
+        style={{ fontSize: '11px', fontWeight: 'normal', marginTop: '32px' }}
+      >
         <Typewriter
-          startDelay={1000}
+          startDelay={3000}
           cursorColor={darkMode ? 'white' : 'black'}
-          text="I'm Belen, a coffee-fueled Full Stack Developer. I build digital solutions that blend design and functionality. Dive into my projects and let’s bring great ideas to life!"
+          text="I'm Belen, a coffee-fueled Full Stack Developer. I build digital solutions that blend design and functionality. Dive into my projects and let’s bring ideas to life!"
           typeSpeed={50}
         />
       </h1>

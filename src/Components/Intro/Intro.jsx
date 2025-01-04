@@ -12,10 +12,10 @@ import { themeContext } from '../../Context'
 import { motion, transform } from 'framer-motion'
 import Resume from './resume.pdf'
 import TypingEffect from '../Animations/TypingEffect/TypingEffect'
+import AnimatedText from '../Animations/AnimatedText/AnimatedText'
 
 const Intro = () => {
   const transition = { duration: 2, type: 'string' }
-
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
 
@@ -23,8 +23,10 @@ const Intro = () => {
     <div className="Intro" id="Intro">
       <div className="i-left">
         <div className="i-name">
-          <span style={{ color: darkMode ? 'white' : '' }}>Hey there!</span>
-          <span>Welcome to my creative corner!</span>
+          <AnimatedText text="Hey there!" delay={0.5} />
+          <AnimatedText text="Welcome to my creative corner!" delay={2} />
+        </div>
+        <div className="i-type">
           <span>
             <TypingEffect />
           </span>

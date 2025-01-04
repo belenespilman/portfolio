@@ -1,20 +1,19 @@
-.toggle{
-    display: flex;
-    justify-content:space-between;
-    border: 3px solid var(--main);
-    border-radius: 1rem;
-    position: relative;
-    padding: 2px;
-    cursor: pointer;
-
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid var(--main);
+  border-radius: 1rem;
+  position: relative;
+  padding: 2px;
+  cursor: pointer;
 }
-.toggle>*{
-    width: 1rem;
-    height: 1rem;
-    color: var(--main);
+.toggle > * {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--main);
 }
-.t-button{
-    border-radius: 100%;
-    background: var(--main);
-    position: absolute;
+.t-button {
+  border-radius: 100%;
+  background: var(--main);
+  position: absolute;
 }

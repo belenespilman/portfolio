@@ -31,7 +31,7 @@
 }
 
 .n-name {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
 }
@@ -43,6 +43,7 @@
   align-items: center;
   justify-content: flex-end;
   font-weight: 400;
+  font-size: 20px;
 }
 
 .n-list > ul {
