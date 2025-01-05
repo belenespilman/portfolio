@@ -1,8 +1,6 @@
 .works {
   display: flex;
-  height: 90vh;
-  margin-top: 4rem;
-
+  margin-top: 5rem;
   /* scroll */
   align-items: center;
 }
@@ -15,7 +13,7 @@ i {
 /* left side */
 .awesome {
   display: flex;
-  flex-direction: column;
+  width: 100%;
   position: relative;
 }
 
@@ -30,12 +28,15 @@ i {
   color: var(--main);
   font-size: 2.5rem;
   font-weight: bold;
+  margin-bottom: 3rem;
 }
-.awesome > :nth-child(3) {
-  width: 200%;
-  color: var(--gray);
-  font-size: 14px;
-  margin-top: 1rem;
+
+.works-desc {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  color: var(--black);
 }
 
 .s-link {
@@ -46,21 +47,26 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 7rem;
-  height: 2.3rem;
+  width: 8rem;
+  height: 2.6rem;
   margin-top: 2rem;
+  background-color: var(--main);
+  color: #fafafa;
+  border: none;
 }
 
 /* right side */
 .w-right {
-  width: 50%;
+  width: 100%;
   position: relative;
-  margin-right: 5.5rem;
   margin-bottom: 140px;
 }
 
 .w-left {
-  width: 50%;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
 }
 
 .w-mainCircle {

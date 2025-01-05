@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import './Works.css'
-
 import ReactJS from '../../img/ReactJS.png'
 import NextJS from '../../img/NextJS.png'
 import Vite from '../../img/Vite.png'
@@ -10,6 +9,7 @@ import { themeContext } from '../../Context'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import WorksAnimation from '../Animations/WorksAnimation/WorksAnimation'
 
 const Works = () => {
   const theme = useContext(themeContext)
@@ -21,23 +21,9 @@ const Works = () => {
         <div className="awesome">
           <span style={{ color: darkMode ? 'white' : '' }}>My Most Used</span>
           <span>Technologies & Frameworks</span>
-          <span style={{ color: 'var(--black)' }}>
-            <i class="fas fa-laptop-code"></i> I have extensive experience
-            working with modern frameworks such as React.js, along with its
-            complementary tools like Vite and Next.js.
-            <br />
-            <i class="fas fa-paint-brush"></i> My expertise also includes
-            implementing projects using Tailwind CSS and TypeScript, ensuring
-            visually appealing and efficient designs.
-            <br />
-            <i class="fas fa-server"></i> Beyond frontend development, I am
-            equally skilled in backend technologies, with a strong foundation in
-            Node.js and related ecosystems.
-            <br />
-            <i class="fas fa-database"></i>Additionally, I am proficient in
-            database management, having worked with both relational databases
-            like PostgreSQL and non-relational databases such as MongoDB.
-          </span>
+          <div className="works-desc">
+            <WorksAnimation />
+          </div>
           <Link to="contact" smooth={true} spy={true} className="s-link">
             <button className="button s-button">Let's Talk</button>
           </Link>

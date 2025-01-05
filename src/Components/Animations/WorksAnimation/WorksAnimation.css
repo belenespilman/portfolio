@@ -1,0 +1,31 @@
+.animated-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.animated-text-line {
+  display: flex;
+  align-items: center;
+  color: var(--black);
+}
+
+.animated-text-line i {
+  font-size: 1.5rem;
+  color: #5f6368; /* Color para los íconos */
+  margin-right: 10px;
+}
+
+.animated-text-line span {
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+  .animated-text-line {
+    font-size: 0.9rem;
+  }
+
+  .animated-text-line i {
+    font-size: 1.2rem;
+  }
+}
