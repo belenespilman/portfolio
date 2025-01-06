@@ -1,33 +1,21 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { FaBook, FaRocket } from 'react-icons/fa'
 
-import {
-  FaLaptopCode,
-  FaPaintBrush,
-  FaServer,
-  FaDatabase,
-} from 'react-icons/fa'
-
-const AnimatedTextWorks = () => {
+const StudiesAnimation = () => {
   const [isInView, setIsInView] = useState(false)
+
   const textLines = [
     {
-      icon: <FaLaptopCode />,
-      text: 'I specialize in modern frameworks like React.js, Vite and Next.js.',
+      icon: <FaBook />,
+      text: 'I have successfully completed several professional courses that significantly enhanced my expertise in Web Development.',
     },
     {
-      icon: <FaPaintBrush />,
-      text: 'I work with TailwindCSS and TypeScript to ensure attractive and efficient designs.',
-    },
-    {
-      icon: <FaServer />,
-      text: "I'm equally skilled in backend technologies such as Node.js, Express and Nest.js.",
-    },
-    {
-      icon: <FaDatabase />,
-      text: 'I manage both relational and non-relational databases like PostgreSQL and MongoDB.',
+      icon: <FaRocket />,
+      text: 'These courses covered a wide range of modern technologies, including React.js, Tailwind CSS, Vite, Next.js, JavaScript, and other industry-leading tools.',
     },
   ]
+
   const observerRef = useRef(null)
 
   useEffect(() => {
@@ -40,7 +28,7 @@ const AnimatedTextWorks = () => {
         }
       },
       {
-        threshold: 0.2,
+        threshold: 0.4,
       },
     )
 
@@ -56,7 +44,7 @@ const AnimatedTextWorks = () => {
   }, [])
 
   return (
-    <div className="animated-text-container">
+    <div style={{ width: '80%', lineHeight: '1' }}>
       {textLines.map((line, index) => (
         <motion.div
           ref={observerRef}
@@ -66,16 +54,14 @@ const AnimatedTextWorks = () => {
             opacity: isInView ? 1 : 0,
             y: isInView ? -20 : 0,
           }}
-          transition={{ delay: index * 0.6, duration: 0.9 }}
+          transition={{ delay: index * 0.7, duration: 0.9 }}
           className="animated-text-line"
         >
-          <i style={{ marginRight: '10px' }}>{line.icon}</i>
+          <i style={{ fontSize: '1.3rem', lineHeight: 1.9, fontWeight: 700 }}>
+            {line.icon}
+          </i>
           <span
-            style={{
-              fontSize: '1.3rem',
-              lineHeight: '1.9',
-              fontWeight: 700,
-            }}
+            style={{ fontSize: '1.3rem', lineHeight: 1.9, fontWeight: 700 }}
           >
             {line.text}
           </span>
@@ -85,4 +71,4 @@ const AnimatedTextWorks = () => {
   )
 }
 
-export default AnimatedTextWorks
+export default StudiesAnimation

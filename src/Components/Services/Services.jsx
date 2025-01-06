@@ -8,6 +8,7 @@ import '@fortawesome/fontawesome-free'
 
 import { themeContext } from '../../Context'
 import { motion } from 'framer-motion'
+import StudiesAnimation from '../Animations/StudiesAnimation/StudiesAnimation'
 
 const Services = () => {
   // context
@@ -25,21 +26,9 @@ const Services = () => {
       {/* left side */}
       <div className="awesome">
         {/* dark mode */}
-        <span style={{ color: darkMode ? 'white' : '' }}>Some of My</span>
-        <span>Finished Courses</span>
-        <span
-          style={{ color: darkMode ? 'rgba(255,255,255,.8)' : 'var(--black)' }}
-        >
-          <i class="fas fa-book"></i> I have successfully completed several
-          professional courses
-          <br /> that significantly enhanced my expertise in Web Development.
-          <br />
-          <i class="fas fa-rocket"></i> These courses covered a wide range of
-          modern technologies,
-          <br /> including React.js, Tailwind CSS, Vite, Next.js,
-          <br />
-          JavaScript, and other industry-leading tools.
-        </span>
+        <span style={{ color: darkMode ? 'white' : '' }}>Some of my</span>
+        <span>Achieved Certifications</span>
+        <StudiesAnimation />
         <a
           href={'https://platzi.com/p/belen.espilman/'}
           target="_blank"
