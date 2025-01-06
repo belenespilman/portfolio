@@ -1,103 +1,104 @@
-.contact-form{
-    padding: 0;
-    display: flex;
-    height: auto;
-    margin-bottom: 5rem;
+.contact-form {
+  padding: 0;
+  display: flex;
+  height: auto;
+  margin-bottom: 5rem;
 }
 
-.c-left{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.c-left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.c-left>img{
-    margin-right: 3rem;
+.c-left > img {
+  margin-right: 3rem;
 }
 
-.c-right{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    flex: 1;
+.c-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  flex: 1;
 }
 
-.c-title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.c-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .c-title > :nth-child(1) {
-    color: var(--black);
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
 .c-title > :nth-child(2) {
-    color: var(--main);
-    font-size: 2.5rem;
-    margin-bottom: 0;
-    font-weight: bold;
+  color: var(--main);
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  font-weight: bold;
 }
 .c-title > :nth-child(3) {
-    color: var(--gray);
-    font-size: 14px;
-    margin-top: 0;
+  color: var(--gray);
+  font-size: 14px;
+  margin-top: 0;
 }
 
-.c-title-text{
-    width: 100%;
+.c-title-text {
+  width: 100%;
 }
 
-.c-right>form{
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    width: 100%;
+.c-right > form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
 }
 
-.c-right .user{
-    width: 100%;
-    height: 2rem;
-    padding: 0.3em;
-    outline: none;
-    border: 2px solid var(--mainCard);
-    border-radius: 8px;
-    font-size: 16px;   
-    text-indent: .5rem;
+.c-right .user {
+  width: 100%;
+  height: 2rem;
+  padding: 0.3em;
+  outline: none;
+  border: 2px solid var(--mainCard);
+  border-radius: 8px;
+  font-size: 16px;
+  text-indent: 0.5rem;
 }
 
-.c-submit-button{
-    width: 70%;
-    cursor: pointer;
+.c-submit-button {
+  width: 70%;
+  cursor: pointer;
+  background-color: var(--main);
+  color: white;
+  border: none;
 }
 
-textarea{
-    height: 4rem!important;
-    text-indent: .5rem;
+textarea {
+  height: 4rem !important;
+  text-indent: 0.5rem;
 }
-
 
 @media screen and (max-width: 480px) {
-    .contact-form{
-        padding: 0;
-        flex-direction: column;
-        gap: 5rem;
-        height: auto;
-    }
+  .contact-form {
+    padding: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: auto;
+  }
 
-    .c-left>img{
-        display: none;
-    }
+  .c-left > img {
+    display: none;
+  }
+}
 
-}   
-
-@media screen and (min-width: 1300px){
-    .c-left>img{
-        margin-right: 10rem;
-    }
+@media screen and (min-width: 1300px) {
+  .c-left > img {
+    margin-right: 10rem;
+  }
 }

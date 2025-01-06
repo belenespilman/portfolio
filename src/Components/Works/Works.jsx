@@ -33,10 +33,17 @@ const Works = () => {
       </div>
       <div className="w-right">
         <motion.div
-          initial={{ rotate: 45 }}
-          whileInView={{ rotate: 0 }}
+          initial={{ rotate: 360 }}
+          animate={{ rotate: 360 }}
+          whileInView={{ rotate: 360 }}
+          onScroll={{ rotate: 180 }}
           viewport={{ margin: '-40px' }}
-          transition={{ duration: 3.5, type: 'spring' }}
+          transition={{
+            duration: 1,
+            type: 'tween',
+            ease: 'linear',
+            repeat: Infinity,
+          }}
           className="w-mainCircle"
         >
           <div className="w-secCircle">

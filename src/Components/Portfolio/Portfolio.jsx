@@ -55,14 +55,16 @@ const Portfolio = () => {
       >
         <SwiperSlide>
           <a
+            className="swiper-a"
             href="https://react-nextjs-travel-app-landing.vercel.app/"
             target={'_blank'}
           >
-            <img src={Sidebar} alt="" />
+            <img className="swiper-a" src={Sidebar} alt="" />
           </a>
         </SwiperSlide>
         <SwiperSlide>
           <a
+            className="swiper-a"
             href="https://notes-app-frontend-liard-three.vercel.app/"
             target={'_blank'}
           >
@@ -70,12 +72,17 @@ const Portfolio = () => {
           </a>
         </SwiperSlide>
         <SwiperSlide>
-          <a href="https://belenespilman.github.io/todo-app/" target={'_blank'}>
+          <a
+            className="swiper-a"
+            href="https://belenespilman.github.io/todo-app/"
+            target={'_blank'}
+          >
             <img src={MusicApp} alt="ToDO APP" />
           </a>
         </SwiperSlide>
         <SwiperSlide>
           <a
+            className="swiper-a"
             href="https://belenespilman.github.io/vite-react-disney-clone/"
             target={'_blank'}
           >
@@ -84,6 +91,7 @@ const Portfolio = () => {
         </SwiperSlide>
         <SwiperSlide>
           <a
+            className="swiper-a"
             href="https://e-commerce-react-tailwind.vercel.app/"
             target={'_blank'}
           >
