@@ -30,6 +30,12 @@
   gap: 2rem;
 }
 
+.f-icons :hover {
+  transform: scale(1.1);
+  transition-duration: 0.8s;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 480px) {
   .f-content {
     transform: scale(0.5);

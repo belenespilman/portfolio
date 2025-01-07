@@ -35,7 +35,7 @@ const Contact = () => {
     <div className="contact-form" id="contact">
       {/* left side copy and paste from work section */}
       <div className="c-left">
-        <img src={ContactMe} alt="mono" />
+        <img src={ContactMe} alt="contacto" />
       </div>
       {/* right side form */}
       <div className="c-right">

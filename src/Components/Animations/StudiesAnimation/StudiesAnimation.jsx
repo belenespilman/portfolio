@@ -12,7 +12,7 @@ const StudiesAnimation = () => {
     },
     {
       icon: <FaRocket />,
-      text: 'These courses covered a wide range of modern technologies, including React.js, Tailwind CSS, Vite, Next.js, JavaScript, and other industry-leading tools.',
+      text: 'These programs covered a wide range of modern technologies, including React.js, Tailwind CSS, Vite, Next.js, JavaScript, and other industry-leading tools.',
     },
   ]
 
