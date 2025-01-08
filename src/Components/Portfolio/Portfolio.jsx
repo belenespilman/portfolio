@@ -9,6 +9,7 @@ import HOC from '../../img/hoc.png'
 import MusicApp from '../../img/musicapp.png'
 import { themeContext } from '../../Context'
 import Shopi from '../../img/shopi.png'
+import NestAPI from '../../img/nestapi.png'
 
 const Portfolio = () => {
   const theme = useContext(themeContext)
@@ -53,6 +54,19 @@ const Portfolio = () => {
         modules={[Navigation]}
         onSlideChange={handleSlideChange}
       >
+        <SwiperSlide>
+          <a
+            className="swiper-a"
+            href="https://ecommerce-api-dev.onrender.com/docs"
+            target={'_blank'}
+          >
+            <img
+              className="swiper-a"
+              src={NestAPI}
+              alt="nest api e-commerce img"
+            />
+          </a>
+        </SwiperSlide>
         <SwiperSlide>
           <a
             className="swiper-a"
