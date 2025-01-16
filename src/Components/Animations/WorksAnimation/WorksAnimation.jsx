@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useContext } from 'react'
 import { motion } from 'framer-motion'
 
 import {
@@ -7,8 +7,13 @@ import {
   FaServer,
   FaDatabase,
 } from 'react-icons/fa'
+import { themeContext } from '../../../Context'
+import '../WorksAnimation/WorksAnimation.css'
 
 const AnimatedTextWorks = () => {
+  const theme = useContext(themeContext)
+  const darkMode = theme.state.darkMode
+
   const [isInView, setIsInView] = useState(false)
   const textLines = [
     {
@@ -56,7 +61,9 @@ const AnimatedTextWorks = () => {
   }, [])
 
   return (
-    <div className="animated-text-container">
+    <div
+      className={`'animated-text-container' ${darkMode ? 'dark-mode' : ''} `}
+    >
       {textLines.map((line, index) => (
         <motion.div
           ref={observerRef}
@@ -67,15 +74,11 @@ const AnimatedTextWorks = () => {
             y: isInView ? -20 : 0,
           }}
           transition={{ delay: index * 0.6, duration: 0.9 }}
-          className="animated-text-line"
+          className={`'animated-text-line' ${darkMode ? 'dark-mode' : ''} `}
         >
-          <i style={{ marginRight: '10px' }}>{line.icon}</i>
+          <i className={`${darkMode ? 'dark-mode-icon' : ''}`}>{line.icon}</i>
           <span
-            style={{
-              fontSize: '1.3rem',
-              lineHeight: '1.9',
-              fontWeight: 700,
-            }}
+            className={`'animated-text-line-span' ${darkMode ? 'animated-text-line-span-dark-mode' : 'animated-text-line-span'}`}
           >
             {line.text}
           </span>

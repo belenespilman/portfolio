@@ -2,14 +2,13 @@ import React, { useContext } from 'react'
 import './Intro.css'
 import Vector1 from '../../img/Vector1.png'
 import Vector2 from '../../img/Vector2.png'
-import boy from '../../img/boy.png'
 import thumbup from '../../img/plane.png'
 import crown from '../../img/lamp.png'
 import FloatinDiv from '../FloatingDiv/FloatingDiv'
 import Github from '../../img/github.png'
 import LinkedIn from '../../img/linkedin.png'
 import { themeContext } from '../../Context'
-import { motion, transform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Resume from './resume.pdf'
 import TypingEffect from '../Animations/TypingEffect/TypingEffect'
 import AnimatedText from '../Animations/AnimatedText/AnimatedText'
@@ -23,7 +22,11 @@ const Intro = () => {
     <div className="Intro" id="Intro">
       <div className="i-left">
         <div className="i-name">
-          <AnimatedText text="Hey there!" delay={0.5} />
+          <AnimatedText
+            text="Hey there!"
+            delay={0.5}
+            className={` i-name ${darkMode ? 'dark-mode' : ''} `}
+          />
           <AnimatedText text="Welcome to my creative corner!" delay={2} />
         </div>
         <div className="i-type">
@@ -42,12 +45,17 @@ const Intro = () => {
             </a>
           </div>
           <div className="i-icons">
-            <a href="https://github.com/belenespilman" target={'_blank'}>
+            <a
+              href="https://github.com/belenespilman"
+              target={'_blank'}
+              rel="noreferrer"
+            >
               <img src={Github} alt="" />
             </a>
             <a
               href="https://www.linkedin.com/in/belen-espilman/"
               target={'_blank'}
+              rel="noreferrer"
             >
               <img src={LinkedIn} alt="" />
             </a>

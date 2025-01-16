@@ -10,14 +10,27 @@
   color: var(--black);
 }
 
-.animated-text-line i {
-  font-size: 1.5rem;
-  color: #5f6368;
+.dark-mode {
+  color: #fafafa;
+  font-size: 1.3rem;
   margin-right: 10px;
 }
 
-.animated-text-line span {
-  line-height: 2;
+.dark-mode-icon {
+  font-size: 1.5rem;
+  color: #fafafa;
+}
+
+.animated-text-line-span {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  font-weight: 700;
+}
+
+.animated-text-line-span-dark-mode {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {

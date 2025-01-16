@@ -14,7 +14,6 @@
   }
 }
 
-/* left side styling */
 .i-left {
   display: flex;
   position: relative;
@@ -26,6 +25,11 @@
 .i-type {
   font-size: 1rem !important;
 }
+
+.i-name.dark-mode > :nth-child(1) {
+  color: #fafafa !important;
+}
+
 .i-name {
   display: flex;
   flex-direction: column;
@@ -38,7 +42,7 @@
 }
 
 .i-name > :nth-child(2) {
-  color: var(--main);
+  color: var(--main) !important;
   font-weight: bold;
   font-size: 4rem;
 }
@@ -83,12 +87,19 @@
   white-space: nowrap;
   padding: 11px 26px;
   max-height: fit-content;
+  text-decoration: none !important;
+  outline: none !important;
+
+  box-shadow: none;
 }
 
 .i-button.dark-mode {
   background-color: black;
   color: var(--main);
   border-color: var(--main);
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none;
 }
 /* right side styling */
 .i-right {

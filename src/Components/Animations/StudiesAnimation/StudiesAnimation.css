@@ -1,0 +1,29 @@
+.animated-div {
+  width: 80%;
+  line-height: 1;
+  display: flex;
+}
+
+.animated-text-line {
+  display: flex;
+  color: var(--black);
+}
+
+.dark-mode {
+  color: #fafafa;
+  font-size: 1rem;
+  line-height: 1.9;
+  font-weight: 700;
+}
+
+.animated-text-line i {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  font-weight: 900;
+}
+
+.animated-text-line span {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  font-weight: 700;
+}
