@@ -13,7 +13,7 @@ const AnimatedText = ({ text, delay }) => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: delay, duration: 0.9 }}
-      className={` 'animated-text' ${darkMode ? 'dark-mode' : ''}`}
+      className={darkMode ? 'dark-mode' : ''}
     >
       <span>{text}</span>
     </motion.div>

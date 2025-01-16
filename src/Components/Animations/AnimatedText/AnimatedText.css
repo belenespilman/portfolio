@@ -1,13 +1,3 @@
-.animated-text {
-  font-size: 1rem;
-  font-weight: bold;
-}
-
 .dark-mode {
   color: #fafafa !important;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-  font-weight: bold;
-  font-size: 4rem;
 }

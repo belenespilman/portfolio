@@ -25,9 +25,13 @@ const Intro = () => {
           <AnimatedText
             text="Hey there!"
             delay={0.5}
-            className={` i-name ${darkMode ? 'dark-mode' : ''} `}
+            className={darkMode ? 'dark-mode' : ''}
           />
-          <AnimatedText text="Welcome to my creative corner!" delay={2} />
+          <AnimatedText
+            text="Welcome to my creative corner!"
+            delay={2}
+            className={darkMode ? 'dark-mode ' : ''}
+          />
         </div>
         <div className="i-type">
           <span>

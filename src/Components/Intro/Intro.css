@@ -26,7 +26,14 @@
   font-size: 1rem !important;
 }
 
-.i-name.dark-mode > :nth-child(1) {
+.i-name .dark-mode > :nth-child(1) {
+  color: var(--main);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.i-name .dark-mode > :nth-child(2) {
   color: #fafafa !important;
 }
 
@@ -42,7 +49,7 @@
 }
 
 .i-name > :nth-child(2) {
-  color: var(--main) !important;
+  color: var(--main);
   font-weight: bold;
   font-size: 4rem;
 }
@@ -89,7 +96,6 @@
   max-height: fit-content;
   text-decoration: none !important;
   outline: none !important;
-
   box-shadow: none;
 }
 
