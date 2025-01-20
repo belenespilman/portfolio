@@ -21,8 +21,8 @@ const TypingEffect = () => {
         <Typewriter
           startDelay={3000}
           cursorColor={darkMode ? 'white' : 'black'}
-          text="I'm Belen, a coffee-fueled Full Stack Developer. I build digital solutions that blend design and functionality. Dive into my projects and let’s bring ideas to life!"
-          typeSpeed={50}
+          text="I'm Belen, a coffee-fueled Full Stack Developer. I build digital solutions that blend design and functionality. Dive into my projects and let’s bring  great ideas to life!"
+          typeSpeed={25}
         />
       </h1>
     </div>
