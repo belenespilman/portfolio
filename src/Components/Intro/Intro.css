@@ -26,22 +26,13 @@
   font-size: 1rem !important;
 }
 
-.i-name .dark-mode > :nth-child(1) {
-  color: var(--main);
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.i-name .dark-mode > :nth-child(2) {
-  color: #fafafa !important;
-}
-
 .i-name {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
 }
+
+/* Estilos normales */
 .i-name > :nth-child(1) {
   color: var(--black);
   font-weight: bold;
@@ -52,6 +43,19 @@
   color: var(--main);
   font-weight: bold;
   font-size: 4rem;
+}
+
+.i-name.dark-mode-i-name > :nth-child(1) {
+  color: #fafafa;
+  font-size: 4rem;
+  line-height: inherit;
+}
+
+.i-name.dark-mode-i-name > :nth-child(2) {
+  color: var(--main) !important;
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: inherit;
 }
 
 .i-icons {

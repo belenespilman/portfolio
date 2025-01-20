@@ -21,17 +21,9 @@ const Intro = () => {
   return (
     <div className="Intro" id="Intro">
       <div className="i-left">
-        <div className="i-name">
-          <AnimatedText
-            text="Hey there!"
-            delay={0.5}
-            className={darkMode ? 'dark-mode' : ''}
-          />
-          <AnimatedText
-            text="Welcome to my creative corner!"
-            delay={2}
-            className={darkMode ? 'dark-mode ' : ''}
-          />
+        <div className={`i-name ${darkMode ? 'dark-mode-i-name' : ''}`}>
+          <AnimatedText text="Hey there!" delay={0.5} />
+          <AnimatedText text="Welcome to my creative corner!" delay={2} />
         </div>
         <div className="i-type">
           <span>
