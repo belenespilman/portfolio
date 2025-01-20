@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Works.css'
 import ReactJS from '../../img/ReactJS.png'
 import NextJS from '../../img/NextJS.png'
@@ -10,8 +10,22 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import WorksAnimation from '../Animations/WorksAnimation/WorksAnimation'
+import { WiNightRainWind } from 'react-icons/wi'
 
 const Works = () => {
+  const [scrollY, setScrollY] = useState(0)
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
 
@@ -34,9 +48,8 @@ const Works = () => {
       <div className="w-right">
         <motion.div
           initial={{ rotate: 45 }}
-          whileInView={{ rotate: 0 }}
-          animate={{ rotate: 0 }}
-          onScroll={{ rotate: 45 }}
+          whileInView={{ rotate: 2 }}
+          animate={{ rotate: Math.min(scrollY / 10, 50) }}
           viewport={{ margin: '-40px' }}
           transition={{
             duration: 1,
