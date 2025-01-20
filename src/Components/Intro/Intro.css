@@ -100,12 +100,9 @@
 }
 
 .i-button.dark-mode {
-  background-color: black;
-  color: var(--main);
-  border-color: var(--main);
-  text-decoration: none !important;
-  outline: none !important;
-  box-shadow: none;
+  background-color: #121212;
+  font-size: inherit;
+  line-height: normal;
 }
 /* right side styling */
 .i-right {

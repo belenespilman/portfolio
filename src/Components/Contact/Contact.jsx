@@ -62,7 +62,7 @@ const Contact = () => {
             className="user"
             placeholder="Your Name"
             style={{
-              background: darkMode ? 'black' : '',
+              background: darkMode ? '#0D0D0D' : '',
               color: darkMode ? 'white' : '',
             }}
           />
@@ -72,7 +72,7 @@ const Contact = () => {
             className="user"
             placeholder="Your Email"
             style={{
-              background: darkMode ? 'black' : '',
+              background: darkMode ? '#0D0D0D' : '',
               color: darkMode ? 'white' : '',
             }}
           />
@@ -81,7 +81,7 @@ const Contact = () => {
             className="user"
             placeholder="Message"
             style={{
-              background: darkMode ? 'black' : '',
+              background: darkMode ? '#0D0D0D' : '',
               color: darkMode ? 'white' : '',
             }}
           />

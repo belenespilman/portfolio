@@ -37,7 +37,7 @@ const Navbar = () => {
       className={`n-wrapper ${showNavbar ? 'visible' : 'hidden'}`}
       id="Navbar"
       style={{
-        background: darkMode ? 'black' : colors.background,
+        background: darkMode ? '#0D0D0D' : colors.background,
         color: darkMode ? 'white' : colors.black,
       }}
     >

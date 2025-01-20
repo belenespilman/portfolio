@@ -42,7 +42,7 @@ const Intro = () => {
           <div>
             <a href={Resume} download>
               <button
-                className={` button i-button ${darkMode ? 'dark-mode' : ''}`}
+                className={` button i-button ${darkMode ? 'i-button dark-mode' : ''}`}
               >
                 Download my CV
               </button>
