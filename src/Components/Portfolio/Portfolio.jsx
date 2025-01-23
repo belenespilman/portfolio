@@ -19,7 +19,7 @@ const Portfolio = () => {
   const [isAnimating, setIsAnimating] = useState(true)
 
   const handleSlideChange = (swiper) => {
-    setIsAnimating(!swiper.isEnd) // Detener animación si estás en el último slide
+    setIsAnimating(!swiper.isEnd) // Detener animación en el último slide
   }
 
   useEffect(() => {
@@ -44,7 +44,6 @@ const Portfolio = () => {
         Swipe right to see more!
       </p>
 
-      {/* slider */}
       <Swiper
         spaceBetween={isMobile ? 50 : 30}
         slidesPerView={isMobile ? 1 : 3}

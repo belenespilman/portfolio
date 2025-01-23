@@ -47,15 +47,14 @@
 
 .i-name.dark-mode-i-name > :nth-child(1) {
   color: #fafafa;
+  font-weight: bold;
   font-size: 4rem;
-  line-height: inherit;
 }
 
 .i-name.dark-mode-i-name > :nth-child(2) {
   color: var(--main) !important;
   font-weight: bold;
   font-size: 4rem;
-  line-height: inherit;
 }
 
 .i-icons {
@@ -81,10 +80,9 @@
   transform: translateX(-73%) translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 20px; /* Espacio entre el botón y los íconos */
+  gap: 20px;
   z-index: 1000;
-  margin-top: 14rem; /* Ajusta para que el contenido no se solape */
-  /* Quitamos el fixed */
+  margin-top: 14rem;
 }
 .i-button {
   margin: 0;
@@ -160,10 +158,79 @@
     margin-top: 6rem;
   }
 
+  .i-left {
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .i-name {
+    line-height: 1;
+  }
+
+  .i-name > :nth-child(1) {
+    color: var(--black);
+    font-weight: bold;
+    font-size: 3rem;
+  }
+
+  .i-name > :nth-child(2) {
+    color: var(--main);
+    font-weight: bold;
+    font-size: 3rem;
+  }
+
+  .i-name.dark-mode-i-name > :nth-child(1) {
+    color: #fafafa;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: inherit;
+  }
+
+  .i-name.dark-mode-i-name > :nth-child(2) {
+    color: var(--main) !important;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: inherit;
+  }
+  .sticky-container {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    transform: translateX(-73%) translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    margin-top: 21rem;
+    margin-left: 1.5rem;
+    margin-bottom: 21rem;
+  }
+
+  .i-button {
+    margin: 8px !important;
+    padding: 10px !important;
+    color: #d272ac;
+    font-weight: 600;
+    background-color: #f5eaf8;
+    border-color: #d272ac;
+    border-width: 2px;
+    border-style: solid;
+    display: inline-block;
+    text-decoration: none !important;
+    outline: none !important;
+    box-shadow: none;
+    width: 100%;
+    font-size: smaller !important;
+  }
+
   .i-right {
-    transform: scale(0.7);
+    transform: scale(0.6);
     right: 4.5rem;
     width: 50%;
+    margin-top: 6rem;
   }
 
   .i-right .blur {

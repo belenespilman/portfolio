@@ -61,14 +61,8 @@ const StudiesAnimation = () => {
           transition={{ delay: index * 0.7, duration: 0.9 }}
           className={`'animated-text-line' ${darkMode ? 'dark-mode' : 'animated-text-line'} `}
         >
-          <i
-            className={`'animated-text-line' ${darkMode ? 'dark-mode' : 'animated-text-line'} `}
-          >
-            {line.icon}
-          </i>
-          <span
-            className={`'animated-text-line' ${darkMode ? 'dark-mode' : 'animated-text-line'} `}
-          >
+          <i className={` ${darkMode ? 'dark-mode' : ''} `}>{line.icon}</i>
+          <span className={` ${darkMode ? 'dark-mode' : ''} `}>
             {line.text}
           </span>
         </motion.div>

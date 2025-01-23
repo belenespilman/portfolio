@@ -4,8 +4,12 @@
 }
 
 .animated-text-line {
-  display: flex;
+  display: flex !important;
+  align-items: flex-start !important;
   color: var(--black);
+  font-size: 1.3rem !important;
+  line-height: 1.9 !important;
+  font-weight: 700 !important;
 }
 
 .dark-mode {
@@ -16,13 +20,20 @@
 }
 
 .animated-text-line i {
-  font-size: 1.3rem;
-  line-height: 1.9;
-  font-weight: 900;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.8rem;
 }
 
 .animated-text-line span {
-  font-size: 1.3rem;
-  line-height: 1.9;
-  font-weight: 700;
+  display: inline-block !important;
+}
+
+@media screen and (max-width: 480px) {
+  .animated-text-line span {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    font-weight: 700;
+  }
 }
