@@ -50,7 +50,7 @@ const Contact = () => {
           <span className="c-title-text">Send me an Email!</span>
           <p
             className="c-title-text"
-            style={{ color: darkMode ? 'white' : '' }}
+            style={{ color: darkMode ? 'white' : '', marginTop: '1rem' }}
           >
             I will reply as soon as possible
           </p>

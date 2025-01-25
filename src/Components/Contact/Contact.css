@@ -85,11 +85,17 @@ textarea {
 }
 
 @media screen and (max-width: 480px) {
+  .c-left {
+    margin-top: 5rem;
+  }
   .contact-form {
     padding: 0;
     flex-direction: column;
     gap: 5rem;
     height: auto;
+    width: auto;
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 
   .c-title-text {

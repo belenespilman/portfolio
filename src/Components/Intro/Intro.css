@@ -6,7 +6,7 @@
 
 @media screen and (max-width: 1500px) {
   .Intro {
-    margin-top: 9rem;
+    margin-top: 10rem;
   }
 
   .i-right {
@@ -37,6 +37,7 @@
   color: var(--black);
   font-weight: bold;
   font-size: 4rem;
+  margin-bottom: 2rem;
 }
 
 .i-name > :nth-child(2) {
@@ -154,32 +155,41 @@
   .Intro {
     flex-direction: column;
     gap: 0rem;
-    height: 150vh;
-    margin-top: 6rem;
+    height: 100vh;
+    margin-top: 8rem;
   }
 
   .i-left {
     display: flex;
     position: relative;
-    flex: 1;
     flex-direction: column;
     margin: 0;
   }
 
   .i-name {
-    line-height: 1;
+    line-height: 1.1;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .i-name > :nth-child(1) {
     color: var(--black);
     font-weight: bold;
     font-size: 4rem;
+    line-height: inherit;
   }
 
   .i-name > :nth-child(2) {
     color: var(--main);
     font-weight: bold;
     font-size: 4rem;
+    line-height: inherit;
+  }
+
+  .dark-mode-i-name {
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   .i-name.dark-mode-i-name > :nth-child(1) {
@@ -187,6 +197,8 @@
     font-weight: bold;
     font-size: 4rem;
     line-height: inherit;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   .i-name.dark-mode-i-name > :nth-child(2) {
@@ -194,19 +206,19 @@
     font-weight: bold;
     font-size: 4rem;
     line-height: inherit;
+    display: flex;
+    flex-direction: column;
   }
+
   .sticky-container {
     position: absolute;
-    top: 60%;
-    left: 70%;
-    transform: translateX(-73%) translateY(-50%);
+    transform: translateX(-60%) translateY(190%);
     display: flex;
     align-items: center;
     gap: 10px;
     z-index: 1000;
-    margin-top: 21rem;
-    margin-left: 1.5rem;
-    margin-bottom: 21rem;
+    margin: 0 !important;
+    padding: 0;
   }
 
   .i-button {
@@ -227,14 +239,18 @@
   }
 
   .i-right {
-    transform: scale(0.6);
-    right: 2rem;
+    /* transform: scale(0.4); */
     width: 50%;
-    margin-top: 6rem;
+    margin-top: 50rem;
+    margin-bottom: 5rem;
+    position: absolute;
+    transform: translateX(-30%) translateY(60%);
   }
 
   .i-right .blur {
-    display: none;
+    z-index: -1000;
+    width: 100%;
+    filter: blur(70px);
   }
 
   .i-icons {

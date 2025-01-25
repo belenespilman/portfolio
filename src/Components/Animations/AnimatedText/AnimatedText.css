@@ -1,3 +1,6 @@
-.dark-mode {
+.dark-mode-animation {
   color: #fafafa !important;
+  display: flex !important;
+  flex-direction: column !important;
+  line-height: 1.1 !important;
 }

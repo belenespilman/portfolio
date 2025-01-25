@@ -152,12 +152,22 @@ i {
     gap: 5rem;
   }
 
+  .w-mainCircle > * {
+    position: absolute;
+    margin-bottom: 0;
+  }
+
+  /* .awesome {
+    margin-top: -6rem;
+  } */
+
   .title {
     line-height: 1.2;
   }
 
   .w-left {
     width: 100%;
+    margin: 0;
   }
 
   .w-right {
