@@ -33,8 +33,10 @@ const Works = () => {
     <div className="works" id="works">
       <div className="w-left">
         <div className="awesome">
-          <span style={{ color: darkMode ? 'white' : '' }}>My Most Used</span>
-          <span>Technologies & Frameworks</span>
+          <span className="title" style={{ color: darkMode ? 'white' : '' }}>
+            My Most Used
+          </span>
+          <span className="title">Technologies & Frameworks</span>
           <div className="works-desc">
             <WorksAnimation />
           </div>

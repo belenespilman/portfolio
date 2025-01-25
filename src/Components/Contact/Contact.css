@@ -92,6 +92,10 @@ textarea {
     height: auto;
   }
 
+  .c-title-text {
+    line-height: 1.2;
+  }
+
   .c-left > img {
     display: none;
   }

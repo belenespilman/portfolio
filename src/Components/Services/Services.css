@@ -7,6 +7,7 @@
   /* scroll view */
   padding-top: 3rem;
 }
+
 /* left side */
 .awesome {
   display: flex;
@@ -38,7 +39,9 @@
     margin-bottom: 20rem;
     padding: 0;
   }
-
+  .title {
+    line-height: 1.2;
+  }
   .awesome {
     width: 100%;
   }

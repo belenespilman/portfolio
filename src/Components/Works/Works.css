@@ -152,6 +152,10 @@ i {
     gap: 5rem;
   }
 
+  .title {
+    line-height: 1.2;
+  }
+
   .w-left {
     width: 100%;
   }

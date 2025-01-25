@@ -26,8 +26,10 @@ const Services = () => {
       {/* left side */}
       <div className="awesome">
         {/* dark mode */}
-        <span style={{ color: darkMode ? 'white' : '' }}>Some of my</span>
-        <span>Achieved Certifications</span>
+        <span className="title" style={{ color: darkMode ? 'white' : '' }}>
+          Some of my
+        </span>
+        <span className="title">Achieved Certifications</span>
         <StudiesAnimation />
         <a
           href={'https://platzi.com/p/belen.espilman/'}
