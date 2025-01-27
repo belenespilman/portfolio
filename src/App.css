@@ -46,7 +46,8 @@ body {
 
 @media screen and (max-width: 480px) {
   .App {
-    padding: 0rem 1rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
     overflow: hidden;
     width: 100%;
   }

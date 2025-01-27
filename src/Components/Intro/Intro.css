@@ -162,7 +162,8 @@
     flex-direction: column;
     gap: 0rem;
     height: 100vh;
-    margin-top: 8rem;
+    margin-top: 7rem;
+    margin-left: 1rem;
   }
 
   .i-left {
@@ -218,7 +219,7 @@
 
   .sticky-container {
     position: absolute;
-    transform: translateX(-0%) translateY(750%);
+    transform: translateX(-0%) translateY(700%);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -249,7 +250,7 @@
     margin-top: 55rem;
     margin-bottom: 15rem;
     position: absolute;
-    scale: 0.8;
+    scale: 0.7;
     transform: translateX(-40%) translateY(70%);
   }
 

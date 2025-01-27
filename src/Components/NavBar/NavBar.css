@@ -68,15 +68,31 @@
 }
 
 @media screen and (max-width: 480px) {
+  .n-wrapper {
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    background-color: (var(--background));
+    z-index: 1000;
+  }
   .n-list {
     display: none;
   }
+
+  /* .n-button {
+    margin-right: 1.5rem;
+  } */
 
   .n-left {
     padding-left: 1rem;
   }
 
   .n-right {
-    padding-right: 1rem;
+    padding-right: 1.5rem;
   }
 }
