@@ -21,11 +21,13 @@
 
 .i-left {
   display: flex;
-  flex: 1;
+  flex: 1.2;
   flex-direction: column;
 }
 
 .i-type {
+  display: flex;
+  width: 90%;
   font-size: 1rem !important;
 }
 

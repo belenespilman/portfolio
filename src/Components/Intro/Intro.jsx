@@ -80,12 +80,7 @@ const Intro = () => {
           className="floating-div"
           style={{ display: 'none' }}
         >
-          <FloatinDiv
-            img={crown}
-            text1="Frontend"
-            text2="Developer"
-            style={{ display: 'none' }}
-          />
+          <FloatinDiv img={crown} style={{ display: 'none' }} />
         </motion.div>
 
         <motion.div
@@ -99,7 +94,7 @@ const Intro = () => {
 
         {/* animation */}
         <motion.div
-          initial={{ left: '10rem', top: '65%' }}
+          initial={{ left: '10rem', top: '70%' }}
           whileInView={{ left: '0rem' }}
           transition={transition}
           className="floating-div thumbup"
