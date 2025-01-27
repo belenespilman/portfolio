@@ -69,7 +69,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="works" spy={true} smooth={true}>
+              <Link to="works" spy={true} smooth={true} offset={-60}>
                 Skills
               </Link>
             </li>
