@@ -114,7 +114,7 @@
 
 @media screen and (max-width: 480px) {
   .portfolio {
-    margin-top: 8rem;
+    margin-top: 15rem;
   }
   .portfolio .swiper img {
     display: flex;

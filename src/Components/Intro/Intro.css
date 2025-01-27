@@ -34,7 +34,7 @@
 .i-name {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 /* Estilos normales */
@@ -55,12 +55,14 @@
   color: #fafafa;
   font-weight: bold;
   font-size: 4rem;
+  line-height: inherit;
 }
 
 .i-name.dark-mode-i-name > :nth-child(2) {
   color: var(--main) !important;
   font-weight: bold;
   font-size: 4rem;
+  line-height: inherit;
 }
 
 .i-icons {
@@ -216,7 +218,7 @@
 
   .sticky-container {
     position: absolute;
-    transform: translateX(-60%) translateY(190%);
+    transform: translateX(-0%) translateY(750%);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -244,10 +246,11 @@
 
   .i-right {
     width: 50%;
-    margin-top: 50rem;
-    margin-bottom: 5rem;
+    margin-top: 55rem;
+    margin-bottom: 15rem;
     position: absolute;
-    transform: translateX(-30%) translateY(60%);
+    scale: 0.8;
+    transform: translateX(-40%) translateY(70%);
   }
 
   .i-right .blur {
