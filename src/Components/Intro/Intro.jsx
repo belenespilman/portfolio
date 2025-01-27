@@ -66,62 +66,62 @@ const Intro = () => {
             </div>
           </div>
         )}
-        {/* right image side */}
-        <div className="i-right">
-          <img src={Vector1} alt="" />
-          <img src={Vector2} alt="" />
-          {/* animation */}
+      </div>
+      {/* right image side */}
+      <div className="i-right">
+        <img src={Vector1} alt="" />
+        <img src={Vector2} alt="" />
+        {/* animation */}
 
-          <motion.div
-            initial={{ top: '-15%', left: '-3s%' }}
-            whileInView={{ left: '-10%' }}
-            transition={transition}
-            className="floating-div"
+        <motion.div
+          initial={{ top: '-15%', left: '-3s%' }}
+          whileInView={{ left: '-10%' }}
+          transition={transition}
+          className="floating-div"
+          style={{ display: 'none' }}
+        >
+          <FloatinDiv
+            img={crown}
+            text1="Frontend"
+            text2="Developer"
             style={{ display: 'none' }}
-          >
-            <FloatinDiv
-              img={crown}
-              text1="Frontend"
-              text2="Developer"
-              style={{ display: 'none' }}
-            />
-          </motion.div>
+          />
+        </motion.div>
 
-          <motion.div
-            initial={{ top: '-6%', left: '95%' }}
-            whileInView={{ left: '80%' }}
-            transition={transition}
-            className="floating-div crown"
-          >
-            {!darkMode && <FloatinDiv style={{}} img={crown} />}
-          </motion.div>
+        <motion.div
+          initial={{ top: '-6%', left: '95%' }}
+          whileInView={{ left: '80%' }}
+          transition={transition}
+          className="floating-div crown"
+        >
+          {!darkMode && <FloatinDiv style={{}} img={crown} />}
+        </motion.div>
 
-          {/* animation */}
-          <motion.div
-            initial={{ left: '10rem', top: '65%' }}
-            whileInView={{ left: '0rem' }}
-            transition={transition}
-            className="floating-div thumbup"
-          >
-            {/* floatinDiv mein change hy dark mode ka */}
-            <FloatinDiv img={thumbup} />
-          </motion.div>
+        {/* animation */}
+        <motion.div
+          initial={{ left: '10rem', top: '65%' }}
+          whileInView={{ left: '0rem' }}
+          transition={transition}
+          className="floating-div thumbup"
+        >
+          {/* floatinDiv mein change hy dark mode ka */}
+          <FloatinDiv img={thumbup} />
+        </motion.div>
 
-          <div
-            className="blur"
-            style={{ background: 'rgba(210, 114, 172,.3)' }}
-          ></div>
-          <div
-            className="blur"
-            style={{
-              background: 'rgba(45, 158, 243, .3)',
-              top: '17rem',
-              width: '21rem',
-              height: '11rem',
-              left: '-9rem',
-            }}
-          ></div>
-        </div>
+        <div
+          className="blur"
+          style={{ background: 'rgba(210, 114, 172,.3)' }}
+        ></div>
+        <div
+          className="blur"
+          style={{
+            background: 'rgba(45, 158, 243, .3)',
+            top: '17rem',
+            width: '21rem',
+            height: '11rem',
+            left: '-9rem',
+          }}
+        ></div>
       </div>
     </div>
   )
