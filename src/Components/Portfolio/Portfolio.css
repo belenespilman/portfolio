@@ -60,7 +60,7 @@
   max-width: 100%;
   gap: 0;
   filter: drop-shadow(-12px 15px 13px rgba(75, 42, 62, 0.25));
-  border-radius: 19px;
+  border-radius: 8px;
 }
 /* Estilos para los botones de navegación */
 .swiper-button-next,

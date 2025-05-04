@@ -6,6 +6,37 @@
   align-content: center;
 }
 
+.i-loader {
+  position: absolute !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 6rem;
+  height: 6rem;
+  border: 3px solid #ccc;
+  border-top-color: #d272ac;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (max-width: 1500px) {
   .Intro {
     margin-top: 6rem;

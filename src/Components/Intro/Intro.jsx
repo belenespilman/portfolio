@@ -12,6 +12,7 @@ import { motion } from 'framer-motion'
 import Resume from './resume.pdf'
 import TypingEffect from '../Animations/TypingEffect/TypingEffect'
 import AnimatedText from '../Animations/AnimatedText/AnimatedText'
+import Rubik from '../../img/rubik.png'
 
 const Intro = () => {
   const transition = { duration: 2, type: 'string' }
@@ -19,6 +20,28 @@ const Intro = () => {
   const darkMode = theme.state.darkMode
 
   const [showDiv, setShowDiv] = useState(false)
+  const [imagesLoaded, setImagesLoaded] = useState(false)
+
+  useEffect(() => {
+    const img1 = new Image()
+    const img2 = new Image()
+
+    img1.src = Vector1
+    img2.src = Vector2
+
+    let loaded = 0
+    const handleLoad = () => {
+      loaded++
+      if (loaded === 2) {
+        setTimeout(() => {
+          setImagesLoaded(true)
+        }, 10000)
+      }
+    }
+
+    img1.onload = handleLoad
+    img2.onload = handleLoad
+  }, [])
 
   useEffect(() => {
     const animationDuration = 6000
@@ -68,40 +91,48 @@ const Intro = () => {
         )}
       </div>
       {/* right image side */}
+
       <div className="i-right">
-        <img src={Vector1} alt="" />
-        <img src={Vector2} alt="" />
-        {/* animation */}
+        {imagesLoaded ? (
+          <>
+            <img src={Rubik} alt="" />
+            {/* <img src={Vector1} alt="" />
+            <img src={Vector2} alt="" />
 
-        <motion.div
-          initial={{ top: '-15%', left: '-3s%' }}
-          whileInView={{ left: '-10%' }}
-          transition={transition}
-          className="floating-div"
-          style={{ display: 'none' }}
-        >
-          <FloatinDiv img={crown} style={{ display: 'none' }} />
-        </motion.div>
+            <motion.div
+              initial={{ top: '-15%', left: '-3s%' }}
+              whileInView={{ left: '-10%' }}
+              transition={transition}
+              className="floating-div"
+              style={{ display: 'none' }}
+            >
+              <FloatinDiv img={crown} style={{ display: 'none' }} />
+            </motion.div>
 
-        <motion.div
-          initial={{ top: '-6%', left: '95%' }}
-          whileInView={{ left: '80%' }}
-          transition={transition}
-          className="floating-div crown"
-        >
-          {!darkMode && <FloatinDiv style={{}} img={crown} />}
-        </motion.div>
+            <motion.div
+              initial={{ top: '-6%', left: '95%' }}
+              whileInView={{ left: '80%' }}
+              transition={transition}
+              className="floating-div crown"
+            >
+              {!darkMode && <FloatinDiv style={{}} img={crown} />}
+            </motion.div>
 
-        {/* animation */}
-        <motion.div
-          initial={{ left: '10rem', top: '70%' }}
-          whileInView={{ left: '0rem' }}
-          transition={transition}
-          className="floating-div thumbup"
-        >
-          {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} />
-        </motion.div>
+            <motion.div
+              initial={{ left: '10rem', top: '70%' }}
+              whileInView={{ left: '0rem' }}
+              transition={transition}
+              className="floating-div thumbup"
+            >
+              <FloatinDiv img={thumbup} />
+            </motion.div> */}
+          </>
+        ) : (
+          <div className="i-loader">
+            <div className="spinner"></div>
+            <span>Loading...</span>
+          </div>
+        )}
 
         <div
           className="blur"
