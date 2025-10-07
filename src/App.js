@@ -7,6 +7,7 @@ import Portfolio from './Components/Portfolio/Portfolio'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
 import { useContext } from 'react'
+import bgImage from './img/—Pngtree—abstract purple line wave background_5542852.png'
 import { themeContext } from './Context'
 
 function App() {
@@ -16,8 +17,12 @@ function App() {
     <div
       className="App"
       style={{
-        background: darkMode ? ' #121212 ' : '',
+        backgroundColor: darkMode ? ' #121212 ' : '',
         color: darkMode ? 'white' : '',
+        backgroundImage: darkMode ? `url(${bgImage})` : '',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
       }}
     >
       <Navbar />

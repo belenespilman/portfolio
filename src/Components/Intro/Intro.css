@@ -1,23 +1,25 @@
 .Intro {
   display: flex;
-  height: 77vh;
+  height: 100vh;
+  width: 100%;
   margin-top: 8rem;
   justify-content: space-between;
   align-content: center;
+  overflow: visible !important;
+  margin-left: 0 !important;
 }
 
 .i-loader {
-  position: absolute !important;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-self: center;
   align-items: center;
-  height: auto;
-  width: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  transform: none;
   background-color: transparent;
   z-index: 9999;
 }
@@ -25,8 +27,8 @@
 .spinner {
   width: 6rem;
   height: 6rem;
-  border: 3px solid #ccc;
-  border-top-color: #d272ac;
+  border: 3px solid #f5eaf8;
+  border-top-color: #d272ac !important;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 1rem;
@@ -47,12 +49,14 @@
   .i-right {
     display: flex;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .i-left {
   display: flex;
-  flex: 1.2;
   flex-direction: column;
 }
 
@@ -64,6 +68,7 @@
 
 .i-name {
   display: flex;
+  padding-top: 4rem;
   flex-direction: column;
   line-height: 1.1;
 }
@@ -73,7 +78,7 @@
   color: var(--black);
   font-weight: bold;
   font-size: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .i-name > :nth-child(2) {
@@ -112,15 +117,6 @@
   transition-duration: 0.4s;
 }
 
-.sticky-container {
-  position: absolute;
-  transform: translateY(250%);
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  z-index: 1000;
-  margin-top: 14rem;
-}
 .i-button {
   margin: 0;
   color: #d272ac;
@@ -129,12 +125,12 @@
   border-color: #d272ac;
   border-width: 3px;
   border-style: solid;
-  display: inline-block;
-  white-space: nowrap;
-  padding: 11px 26px;
-  max-height: fit-content;
+  display: flex;
+
+  flex-direction: row;
   text-decoration: none !important;
   outline: none !important;
+  text-decoration-line: none !important;
   box-shadow: none;
 }
 
@@ -186,6 +182,15 @@
   top: -5%;
   left: 56%;
   filter: blur(72px);
+}
+
+.i-container {
+  display: flex;
+  padding-top: 3rem;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 @media screen and (max-width: 480px) {
@@ -248,15 +253,11 @@
     flex-direction: column;
   }
 
-  .sticky-container {
-    position: absolute;
-    transform: translateX(-0%) translateY(700%);
+  .i-container {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: row;
+    align-items: flex-start;
     z-index: 1000;
-    margin: 0 !important;
-    padding: 0;
   }
 
   .i-button {

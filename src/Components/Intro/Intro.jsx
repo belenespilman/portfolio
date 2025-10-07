@@ -63,8 +63,8 @@ const Intro = () => {
           </span>
         </div>
         {showDiv && (
-          <div className="sticky-container">
-            <a href={Resume} download>
+          <div className="i-container">
+            <a style={{ textDecorationLine: 'none' }} href={Resume} download>
               <button
                 className={`button i-button ${darkMode ? 'i-button dark-mode' : ''}`}
               >
@@ -89,65 +89,6 @@ const Intro = () => {
             </div>
           </div>
         )}
-      </div>
-      {/* right image side */}
-
-      <div className="i-right">
-        {imagesLoaded ? (
-          <>
-            <img src={Rubik} alt="" />
-            {/* <img src={Vector1} alt="" />
-            <img src={Vector2} alt="" />
-
-            <motion.div
-              initial={{ top: '-15%', left: '-3s%' }}
-              whileInView={{ left: '-10%' }}
-              transition={transition}
-              className="floating-div"
-              style={{ display: 'none' }}
-            >
-              <FloatinDiv img={crown} style={{ display: 'none' }} />
-            </motion.div>
-
-            <motion.div
-              initial={{ top: '-6%', left: '95%' }}
-              whileInView={{ left: '80%' }}
-              transition={transition}
-              className="floating-div crown"
-            >
-              {!darkMode && <FloatinDiv style={{}} img={crown} />}
-            </motion.div>
-
-            <motion.div
-              initial={{ left: '10rem', top: '70%' }}
-              whileInView={{ left: '0rem' }}
-              transition={transition}
-              className="floating-div thumbup"
-            >
-              <FloatinDiv img={thumbup} />
-            </motion.div> */}
-          </>
-        ) : (
-          <div className="i-loader">
-            <div className="spinner"></div>
-            <span>Loading...</span>
-          </div>
-        )}
-
-        <div
-          className="blur"
-          style={{ background: 'rgba(210, 114, 172,.3)' }}
-        ></div>
-        <div
-          className="blur"
-          style={{
-            background: 'rgba(45, 158, 243, .3)',
-            top: '17rem',
-            width: '21rem',
-            height: '11rem',
-            left: '-9rem',
-          }}
-        ></div>
       </div>
     </div>
   )
