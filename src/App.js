@@ -20,8 +20,8 @@ function App() {
         backgroundColor: darkMode ? ' #121212 ' : '',
         color: darkMode ? 'white' : '',
         backgroundImage: darkMode ? `url(${bgImage})` : '',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundSize: 'contain',
+        backgroundPosition: 'initial',
         backgroundRepeat: 'no-repeat',
       }}
     >
