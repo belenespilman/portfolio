@@ -28,13 +28,12 @@ body {
   padding: 0.5rem 3.5rem 0.5rem 3.5rem;
   overflow: hidden;
   color: var(--black);
-  background-color: var(--background);
-  background-image: url('img/—Pngtree—abstract\ purple\ line\ wave\ background_5542852.png');
-  background-size: contain;
-  background-position: initial;
-  background-repeat: no-repeat;
+  background-color: rgba(246, 210, 210, 0.4);
+  z-index: 0; /* permite usar el pseudo-elemento detrás */
 }
 
+@media screen and (max-width: 768px) {
+}
 .button {
   border-radius: 6px;
   font-size: 16px;

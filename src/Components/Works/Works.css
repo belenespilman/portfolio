@@ -150,12 +150,13 @@ i {
     padding: 0;
     margin-left: 2rem;
     margin-right: 2rem;
+    margin-bottom: 5rem;
     gap: 5rem;
   }
 
   .w-mainCircle > * {
     position: absolute;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
   }
 
   /* .awesome {
@@ -179,6 +180,7 @@ i {
     align-items: flex-start;
     justify-content: start;
     transform: scale(0.7);
+    margin-bottom: 12rem;
   }
   .w-mainCircle {
     position: static;

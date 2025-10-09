@@ -4,8 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
-  margin-top: 12rem;
+  height: 90vh;
   padding: 20px;
 }
 
@@ -114,10 +113,13 @@
 
 @media screen and (max-width: 480px) {
   .portfolio {
-    margin-top: 15rem;
-    margin-right: 1rem;
+    display: flex;
+    overflow: hidden;
+    margin-top: 3rem !important;
+    min-height: 100vh;
   }
   .portfolio .swiper img {
+    overflow: hidden;
     display: flex;
     width: auto;
     max-width: 100%;
@@ -129,6 +131,7 @@
   }
 
   .portfolio-slider .swiper-slide {
+    overflow: hidden;
     display: flex;
     gap: 4rem;
     width: 110%;

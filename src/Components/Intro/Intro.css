@@ -69,6 +69,7 @@
 .i-name {
   display: flex;
   padding-top: 4rem;
+
   flex-direction: column;
   line-height: 1.1;
 }
@@ -186,7 +187,7 @@
 
 .i-container {
   display: flex;
-  padding-top: 3rem;
+  padding-top: 4rem;
   flex-direction: row;
   justify-items: center;
   align-items: center;
@@ -197,9 +198,10 @@
   .Intro {
     flex-direction: column;
     gap: 0rem;
-    height: 100vh;
+    height: 90vh;
     margin-top: 7rem;
     margin-left: 1rem;
+    margin-bottom: 0 !important;
   }
 
   .i-left {
@@ -211,9 +213,14 @@
 
   .i-name {
     line-height: 1.1;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     display: flex;
+    padding: 1rem;
     flex-direction: column;
+  }
+
+  .i-type {
+    padding: 1.5rem;
   }
 
   .i-name > :nth-child(1) {
@@ -256,12 +263,14 @@
   .i-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
     z-index: 1000;
+    padding: 1rem;
   }
 
   .i-button {
-    margin: 8px !important;
     padding: 10px !important;
     color: #d272ac;
     font-weight: 600;

@@ -8,7 +8,7 @@ const Navbar = () => {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
   const colors = {
-    background: '#f5eaf8',
+    background: 'rgba(246, 210, 210, 0.9)',
     black: '#242d49',
   }
 
