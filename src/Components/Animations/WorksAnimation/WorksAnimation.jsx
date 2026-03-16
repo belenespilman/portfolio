@@ -9,8 +9,10 @@ import {
 } from 'react-icons/fa'
 import { themeContext } from '../../../Context'
 import '../WorksAnimation/WorksAnimation.css'
+import { useTranslation } from 'react-i18next'
 
 const AnimatedTextWorks = () => {
+  const { t } = useTranslation()
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
 
@@ -18,19 +20,19 @@ const AnimatedTextWorks = () => {
   const textLines = [
     {
       icon: <FaLaptopCode />,
-      text: 'I specialize in modern frameworks like React.js, Vite and Next.js.',
+      text: t('works.anim1'),
     },
     {
       icon: <FaPaintBrush />,
-      text: 'I work with TailwindCSS and TypeScript to ensure attractive and efficient designs.',
+      text: t('works.anim2'),
     },
     {
       icon: <FaServer />,
-      text: "I'm equally skilled in backend technologies such as Node.js, Express and Nest.js.",
+      text: t('works.anim3'),
     },
     {
       icon: <FaDatabase />,
-      text: 'I manage both relational and non-relational databases like PostgreSQL and MongoDB.',
+      text: t('works.anim4'),
     },
   ]
   const observerRef = useRef(null)

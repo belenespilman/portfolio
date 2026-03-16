@@ -1,8 +1,10 @@
 import React, { useContext, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import Typewriter from 'react-typewriter-effect'
 import { themeContext } from '../../../Context'
 
 const TypingEffect = () => {
+  const { t } = useTranslation()
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
 
@@ -21,7 +23,7 @@ const TypingEffect = () => {
         <Typewriter
           startDelay={3000}
           cursorColor={darkMode ? 'white' : 'black'}
-          text="Hi! 👋🏼 I'm Belén, a coffee-fueled Full Stack Developer. I build digital solutions that blend design and functionality. Dive into my projects and let’s bring  great ideas to life!"
+          text={t('intro.typing')}
           typeSpeed={20}
         />
       </h1>

@@ -2,14 +2,23 @@
   display: flex;
   align-items: center;
   position: relative;
-  margin-top: 120px;
+  margin-top: 5rem;
   margin-bottom: 0;
-  height: 246px;
+  height: 450px; /* Max height to ensure no clipping */
+  width: 100vw; 
+  margin-left: calc(-50vw + 50%); 
+  overflow: hidden;
 }
 
 .wave {
-  width: 100hv;
-  margin-left: -20rem;
+  width: 100%;
+  height: 100%; /* Cover full footer height */
+  object-fit: fill; /* Ensure it stretches to fill the height */
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-bottom: -1px;
 }
 
 .f-content {
@@ -19,15 +28,16 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  margin: 0;
-  gap: 4rem;
-
+  bottom: 4rem; /* Anchor to bottom where the wave color is solid */
+  gap: 2rem;
   color: white;
+  z-index: 2;
 }
+
 .f-icons {
   margin: 0;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .f-icons :hover {
@@ -36,15 +46,24 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1024px) {
+  .wave {
+    width: 200%;
+    margin-left: -50%;
+  }
+
   .f-content {
-    transform: scale(0.8);
-    margin-top: -7rem;
-    gap: 2rem;
+    bottom: 2rem;
+    transform: scale(0.9);
   }
 
   .footer {
-    margin-top: 10rem;
-    height: 3rem;
+    height: 15rem; /* Taller on mobile too */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .f-content {
+    transform: scale(0.7);
   }
 }

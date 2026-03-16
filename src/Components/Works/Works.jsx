@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import './Works.css'
 import ReactJS from '../../img/ReactJS.png'
 import NextJS from '../../img/NextJS.png'
@@ -13,6 +14,7 @@ import WorksAnimation from '../Animations/WorksAnimation/WorksAnimation'
 import { WiNightRainWind } from 'react-icons/wi'
 
 const Works = () => {
+  const { t } = useTranslation()
   const [scrollY, setScrollY] = useState(0)
 
   const handleScroll = () => {
@@ -34,14 +36,14 @@ const Works = () => {
       <div className="w-left">
         <div className="awesome">
           <span className="title" style={{ color: darkMode ? 'white' : '' }}>
-            My Most Used
+            {t('works.titleTop')}
           </span>
-          <span className="title">Technologies & Frameworks</span>
+          <span className="title">{t('works.titleBottom')}</span>
           <div className="works-desc">
             <WorksAnimation />
           </div>
           <Link to="contact" smooth={true} spy={true} className="s-link">
-            <button className="button s-button">Let's Talk</button>
+            <button className="button s-button">{t('works.cta')}</button>
           </Link>
         </div>
 

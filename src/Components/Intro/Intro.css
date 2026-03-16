@@ -2,11 +2,12 @@
   display: flex;
   height: 100vh;
   width: 100%;
-  margin-top: 8rem;
+  margin-top: 6rem;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   overflow: visible !important;
-  margin-left: 0 !important;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .i-loader {
@@ -107,7 +108,7 @@
   margin: 0;
   display: flex;
   justify-content: flex-start;
-  z-index: 1000;
+  z-index: 1;
 }
 .i-icons > * {
   transform: scale(0.5);
@@ -122,7 +123,7 @@
   margin: 0;
   color: #d272ac;
   font-weight: 700;
-  background-color: #f5eaf8;
+  background-color: transparent;
   border-color: #d272ac;
   border-width: 3px;
   border-style: solid;
@@ -136,9 +137,7 @@
 }
 
 .i-button.dark-mode {
-  background-color: #121212;
-  font-size: inherit;
-  line-height: normal;
+  background-color: transparent;
 }
 /* right side styling */
 
@@ -191,121 +190,93 @@
   flex-direction: row;
   justify-items: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1024px) {
   .Intro {
     flex-direction: column;
-    gap: 0rem;
-    height: 90vh;
-    margin-top: 7rem;
-    margin-left: 1rem;
-    margin-bottom: 0 !important;
+    height: auto;
+    margin-top: 6rem;
+    padding: 0 1rem;
+    text-align: center;
+    gap: 2rem;
   }
 
   .i-left {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    margin: 0;
+    align-items: center;
   }
 
   .i-name {
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    display: flex;
-    padding: 1rem;
-    flex-direction: column;
+    padding-top: 0;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+
+  .i-name > span {
+    font-size: 2.2rem !important; /* Slightly smaller */
+    text-align: center;
+    word-break: break-word; /* Prevents overflow */
   }
 
   .i-type {
-    padding: 1.5rem;
-  }
-
-  .i-name > :nth-child(1) {
-    color: var(--black);
-    font-weight: bold;
-    font-size: 4rem;
-    line-height: inherit;
-  }
-
-  .i-name > :nth-child(2) {
-    color: var(--main);
-    font-weight: bold;
-    font-size: 4rem;
-    line-height: inherit;
-  }
-
-  .dark-mode-i-name {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .i-name.dark-mode-i-name > :nth-child(1) {
-    color: #fafafa;
-    font-weight: bold;
-    font-size: 4rem;
-    line-height: inherit;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  .i-name.dark-mode-i-name > :nth-child(2) {
-    color: var(--main) !important;
-    font-weight: bold;
-    font-size: 4rem;
-    line-height: inherit;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
   }
 
   .i-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    padding: 1rem;
+    padding-top: 1.5rem;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .i-button {
-    padding: 10px !important;
-    color: #d272ac;
-    font-weight: 600;
-    background-color: #f5eaf8;
-    border-color: #d272ac;
-    border-width: 2px;
-    border-style: solid;
-    display: inline-block;
-    text-decoration: none !important;
-    outline: none !important;
-    box-shadow: none;
-    width: 100%;
-    font-size: smaller !important;
+    width: auto;
+    min-width: 180px;
   }
 
   .i-right {
-    width: 50%;
-    margin-top: 55rem;
-    margin-bottom: 15rem;
-    position: absolute;
-    scale: 0.7;
-    transform: translateX(-40%) translateY(70%);
-  }
-
-  .i-right .blur {
-    z-index: -1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    filter: blur(70px);
+    height: 350px; /* Reduced height */
+    position: relative;
+    transform: none;
+    margin: 2rem 0;
   }
 
-  .i-icons {
-    margin-top: 0;
+  .i-right > * {
+    transform: scale(0.5) !important; /* Scale down more */
   }
+
+  /* Reposition for 768px */
+  .i-right > :nth-child(1) { left: -5%; top: -10%; }
+  .i-right > :nth-child(2) { left: 15%; top: 0; }
+  .i-right > :nth-child(3) { left: 35%; top: 10%; }
+  .i-right > :nth-child(4) { left: 5%; top: -15%; }
 
   .floating-div {
     display: none;
+  }
+
+  .i-icons {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .i-name > span {
+    font-size: 1.8rem !important; /* Even smaller for small mobiles */
+  }
+
+  .i-right {
+    height: 300px;
+    margin: 1rem 0;
+  }
+
+  .i-right > * {
+    transform: scale(0.4) !important; /* Even smaller */
   }
 }

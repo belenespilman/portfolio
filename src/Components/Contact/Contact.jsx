@@ -1,10 +1,12 @@
 import React, { useContext, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import './Contact.css'
 import emailjs from '@emailjs/browser'
 import { themeContext } from '../../Context'
 import ContactMe from '../../img/contact-me.png'
 
 const Contact = () => {
+  const { t } = useTranslation()
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
   const form = useRef()
@@ -45,14 +47,14 @@ const Contact = () => {
             style={{ color: darkMode ? 'white' : '' }}
             className="c-title-text"
           >
-            Get in Touch
+            {t('contact.getInTouch')}
           </span>
-          <span className="c-title-text">Send me an Email!</span>
+          <span className="c-title-text">{t('contact.sendEmail')}</span>
           <p
             className="c-title-text"
             style={{ color: darkMode ? 'white' : '', marginTop: '1rem' }}
           >
-            I will reply as soon as possible
+            {t('contact.replySoon')}
           </p>
         </div>
         <form ref={form} onSubmit={sendEmail}>
@@ -60,37 +62,25 @@ const Contact = () => {
             type="text"
             name="user_name"
             className="user"
-            placeholder="Your Name"
-            style={{
-              background: darkMode ? '#0D0D0D' : '',
-              color: darkMode ? 'white' : '',
-            }}
+            placeholder={t('contact.placeholderName')}
           />
           <input
             type="email"
             name="user_email"
             className="user"
-            placeholder="Your Email"
-            style={{
-              background: darkMode ? '#0D0D0D' : '',
-              color: darkMode ? 'white' : '',
-            }}
+            placeholder={t('contact.placeholderEmail')}
           />
           <textarea
             name="message"
             className="user"
-            placeholder="Message"
-            style={{
-              background: darkMode ? '#0D0D0D' : '',
-              color: darkMode ? 'white' : '',
-            }}
+            placeholder={t('contact.placeholderMessage')}
           />
           <input
             type="submit"
-            value="Send"
+            value={t('contact.send')}
             className="button c-submit-button"
           />
-          <span>{done && 'Thanks for Contacting me'}</span>
+          <span>{done && t('contact.thanks')}</span>
         </form>
       </div>
     </div>

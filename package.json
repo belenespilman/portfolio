@@ -10,8 +10,11 @@
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
     "framer-motion": "^6.2.8",
+    "i18next": "^25.8.18",
+    "i18next-browser-languagedetector": "^8.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-i18next": "^16.5.8",
     "react-icons": "^5.4.0",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.6",
@@ -24,7 +27,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "format": "prettier --write \"src/**/*.(js|jsx)\"",
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -51,5 +54,5 @@
     "gh-pages": "^6.1.1",
     "prettier": "^3.2.4"
   },
-  "homepage": "htts://belenespilman.github.io/portfolio"
+  "homepage": "."
 }

@@ -1,31 +1,59 @@
 .card {
-  width: 12rem;
-  height: 12rem;
+  width: 14rem; /* Increased width slightly */
+  min-height: 14rem; /* Increased height to contain text */
+  height: auto;
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 0.5rem;
   align-items: center;
   text-align: center;
-  background: rgba(255, 255, 255, 0.26);
-  border: 4px solid var(--mainCard);
-  box-shadow: var(--boxShadow);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 2px solid var(--main); /* Pink border from project */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
   border-radius: 20px;
-  padding: 16px 26px 36px 26px;
+  padding: 20px;
   margin-top: -3rem;
-}
-.card span:nth-of-type(2) {
-  color: var(--black);
-  font-size: 16px;
-}
-.card > img {
-  transform: scale(1);
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
-@media screen and (max-width: 480px) {
+.card.dark {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card.dark span {
+  color: #fafafa !important;
+}
+
+.card span:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--black);
+}
+
+.card span:nth-of-type(2) {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.card > img {
+  transform: scale(0.6);
+  margin-bottom: -1rem;
+}
+
+@media screen and (max-width: 1024px) {
   .card {
-    width: auto;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+    width: 100%;
+    max-width: 15rem;
+    position: relative !important;
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
+    height: auto;
+    min-height: 14rem;
   }
 }

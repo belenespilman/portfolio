@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import './Intro.css'
 import Vector1 from '../../img/Vector-1.png'
 import Vector2 from '../../img/Vector2.png'
@@ -15,6 +16,7 @@ import AnimatedText from '../Animations/AnimatedText/AnimatedText'
 import Rubik from '../../img/rubik.png'
 
 const Intro = () => {
+  const { t } = useTranslation()
   const transition = { duration: 2, type: 'string' }
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
@@ -54,8 +56,8 @@ const Intro = () => {
     <div className="Intro" id="Intro">
       <div className="i-left">
         <div className={`i-name ${darkMode ? 'dark-mode-i-name' : ''}`}>
-          <AnimatedText text="Hey there!" delay={0.5} />
-          <AnimatedText text="Welcome to my creative corner!" delay={2} />
+          <AnimatedText text={t('intro.hey')} delay={0.5} />
+          <AnimatedText text={t('intro.welcome')} delay={2} />
         </div>
         <div className="i-type">
           <span>
@@ -68,7 +70,7 @@ const Intro = () => {
               <button
                 className={`button i-button ${darkMode ? 'i-button dark-mode' : ''}`}
               >
-                Download my CV
+                {t('intro.cv')}
               </button>
             </a>
             <div className="i-icons">

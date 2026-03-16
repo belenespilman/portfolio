@@ -1,141 +1,92 @@
 .portfolio {
-  position: relative;
+  padding: 4rem 2rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  height: 90vh;
-  padding: 20px;
+  align-items: center;
+  gap: 1rem;
+  min-height: 100vh;
 }
 
-.p-swipe-cta {
-  margin-top: 0;
-  margin-bottom: -24px;
-}
-
-/* heading */
 .portfolio span:nth-of-type(1) {
-  color: var(--black);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: -10px;
-  margin-top: -10px;
 }
 
 .portfolio span:nth-of-type(2) {
+  font-size: 3rem;
+  font-weight: bold;
   color: var(--main);
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0;
+  margin-top: -1rem;
 }
 
-/* slider */
-.portfolio .swiper {
-  overflow: visible !important;
-  width: 100vw; /* Asegura que el Swiper ocupe todo el ancho disponible */
-  margin-left: calc(-5px); /* Compensa el padding de la izquierda */
-  margin-right: calc(-5px);
-  padding-left: 64px; /* Agrega un pequeño padding en el lado izquierdo */
-  padding-right: 64px;
-  box-sizing: border-box;
-}
-
-.portfolio-slider {
-  margin-top: 4rem;
-  width: 100vw;
-}
-
-.swiper-a :hover {
-  transform: scale(1.09);
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-
-.portfolio-slider .swiper-slide {
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   width: 100%;
+  max-width: 1200px;
+  margin-top: 3rem;
 }
-.portfolio img {
-  width: auto;
-  max-width: 100%;
-  gap: 0;
-  filter: drop-shadow(-12px 15px 13px rgba(75, 42, 62, 0.25));
-  border-radius: 8px;
-}
-/* Estilos para los botones de navegación */
-.swiper-button-next,
-.swiper-button-prev {
-  font-size: large;
-  color: rgba(90, 87, 89, 0.4) !important;
-  border-radius: 70% !important;
-  padding: 10px;
-  z-index: 10;
+
+.portfolio-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 2px solid var(--main);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
   cursor: pointer;
 }
 
-.swiper-button-prev:hover {
-  color: rgba(102, 97, 100, 0.5) !important;
-  transform: scale(1.6);
-  transition: 0.4s;
+.p-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 60px !important; /* Tamaño de las flechas */
+.p-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .p-card-image img {
+  transform: scale(1.1);
+}
+
+.p-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(210, 114, 172, 0.8); /* Pink overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .p-card-overlay {
+  opacity: 1;
+}
+
+.p-card-overlay span {
+  color: white;
+  font-size: 1.2rem;
   font-weight: bold;
+  text-align: center;
+  padding: 1rem;
 }
 
-@keyframes moveArrow {
-  0% {
-    transform: translateX(0); /* posición inicial */
-  }
-  50% {
-    transform: translateX(10px); /* mueve la flecha un poco a la derecha */
-  }
-  100% {
-    transform: translateX(0); /* vuelve a la posición original */
-  }
-}
-
-.swiper-button-next {
-  animation: moveArrow 1.2s ease-in-out infinite;
-  color: rgba(102, 97, 100, 0.5);
-}
-
-.swiper-button-next:hover {
-  animation: none;
-  transform: scale(1.6);
-  transition: 0.7s !important;
-}
-
-.swiper-button-next.no-animation {
-  animation: none;
-}
-
-@media screen and (max-width: 480px) {
-  .portfolio {
-    display: flex;
-    overflow: hidden;
-    margin-top: 3rem !important;
-    min-height: 100vh;
-  }
-  .portfolio .swiper img {
-    overflow: hidden;
-    display: flex;
-    width: auto;
-    max-width: 100%;
-    border-radius: 12px;
-  }
-
-  .p-swipe-cta {
-    display: block;
-  }
-
-  .portfolio-slider .swiper-slide {
-    overflow: hidden;
-    display: flex;
-    gap: 4rem;
-    width: 110%;
-    margin-right: 12px;
-    margin-bottom: 0;
+@media screen and (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
   }
 }

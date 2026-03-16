@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "projects": "Projects",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "intro": {
+    "hey": "Hey there!",
+    "welcome": "Welcome to my creative corner!",
+    "typing": "Hi! 👋🏼 I'm Belén, a coffee-fueled Full Stack Developer. I build digital solutions that blend design and functionality. Dive into my projects and let’s bring great ideas to life!",
+    "cv": "Download my CV"
+  },
+  "services": {
+    "title1": "Achieved",
+    "title2": "Certifications",
+    "seeMore": "See More",
+    "anim1": "I have successfully completed several professional courses that significantly enhanced my expertise in Web Development.",
+    "anim2": "These programs covered a wide range of modern technologies, including React.js, Tailwind CSS, Vite, Next.js, JavaScript, and other industry-leading tools."
+  },
+  "works": {
+    "titleTop": "My Most Used",
+    "titleBottom": "Technologies & Frameworks",
+    "cta": "Let's Talk",
+    "anim1": "I specialize in modern frameworks like React.js, Vite and Next.js.",
+    "anim2": "I work with TailwindCSS and TypeScript to ensure attractive and efficient designs.",
+    "anim3": "I'm equally skilled in backend technologies such as Node.js, Express and Nest.js.",
+    "anim4": "I manage both relational and non-relational databases like PostgreSQL and MongoDB."
+  },
+  "portfolio": {
+    "recent": "Recent Projects",
+    "my": "My Portfolio",
+    "swipe": "Swipe right to see more!"
+  },
+  "contact": {
+    "getInTouch": "Get in Touch",
+    "sendEmail": "Send me an Email!",
+    "replySoon": "I will reply as soon as possible",
+    "placeholderName": "Your Name",
+    "placeholderEmail": "Your Email",
+    "placeholderMessage": "Message",
+    "send": "Send",
+    "thanks": "Thanks for Contacting me"
+  },
+  "footer": {
+    "allRights": "All rights reserved"
+  }
+}

@@ -33,12 +33,18 @@
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .animated-text-line {
     font-size: 0.9rem;
+    word-break: break-word;
   }
 
-  .animated-text-line i {
-    font-size: 1.2rem;
+  .animated-text-line-span, .animated-text-line-span-dark-mode {
+    font-size: 1rem;
+    line-height: normal;
+  }
+
+  .animated-text-line i, .dark-mode-icon {
+    font-size: 1.1rem;
   }
 }

@@ -3,8 +3,10 @@ import { motion } from 'framer-motion'
 import { FaBook, FaRocket } from 'react-icons/fa'
 import { themeContext } from '../../../Context'
 import '../StudiesAnimation/StudiesAnimation.css'
+import { useTranslation } from 'react-i18next'
 
 const StudiesAnimation = () => {
+  const { t } = useTranslation()
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
   const [isInView, setIsInView] = useState(false)
@@ -12,11 +14,11 @@ const StudiesAnimation = () => {
   const textLines = [
     {
       icon: <FaBook />,
-      text: 'I have successfully completed several professional courses that significantly enhanced my expertise in Web Development.',
+      text: t('services.anim1'),
     },
     {
       icon: <FaRocket />,
-      text: 'These programs covered a wide range of modern technologies, including React.js, Tailwind CSS, Vite, Next.js, JavaScript, and other industry-leading tools.',
+      text: t('services.anim2'),
     },
   ]
 

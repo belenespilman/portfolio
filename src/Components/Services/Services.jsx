@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useTranslation } from 'react-i18next'
 import './Services.css'
 import Card from '../Card/Card'
 import ReactCourse from '../../img/ReactCourse.png'
@@ -11,9 +12,18 @@ import { motion } from 'framer-motion'
 import StudiesAnimation from '../Animations/StudiesAnimation/StudiesAnimation'
 
 const Services = () => {
+  const { t } = useTranslation()
   // context
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
+  const [width, setWidth] = React.useState(window.innerWidth)
+  React.useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const isMobile = width <= 1024
 
   // transition
   const transition = {
@@ -27,25 +37,25 @@ const Services = () => {
       <div className="awesome">
         {/* dark mode */}
         <span className="title" style={{ color: darkMode ? 'white' : '' }}>
-          Some of my
+          {t('services.title1')}
         </span>
-        <span className="title">Achieved Certifications</span>
+        <span className="title">{t('services.title2')}</span>
         <StudiesAnimation />
         <a
           href={'https://platzi.com/p/belen.espilman/'}
           target="_blank"
           style={{ textDecoration: 'none' }}
         >
-          <button className="button s-button">See More</button>
+          <button className="button s-button">{t('services.seeMore')}</button>
         </a>
       </div>
-      {/* right */}
       <div className="cards">
         {/* first card */}
         <motion.div
-          initial={{ left: '25rem' }}
-          whileInView={{ left: '15rem' }}
+          initial={{ x: isMobile ? -50 : 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={transition}
+          className="s-card-wrapper s-card-1"
         >
           <Card
             logo={ReactCourse}
@@ -56,9 +66,10 @@ const Services = () => {
         </motion.div>
         {/* second card */}
         <motion.div
-          initial={{ left: '-15rem', top: '12rem' }}
-          whileInView={{ left: '-4rem', top: '10rem' }}
+          initial={{ x: isMobile ? 50 : -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={transition}
+          className="s-card-wrapper s-card-2"
         >
           <Card
             logo={OopCourse}
@@ -69,9 +80,10 @@ const Services = () => {
         </motion.div>
         {/* 3rd */}
         <motion.div
-          initial={{ top: '19rem', right: '-12rem' }}
-          whileInView={{ left: '15rem', top: '18rem' }}
+          initial={{ x: isMobile ? -50 : 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={transition}
+          className="s-card-wrapper s-card-3"
         >
           <Card
             logo={UiUxCourse}

@@ -6,23 +6,26 @@ import Works from './Components/Works/Works'
 import Portfolio from './Components/Portfolio/Portfolio'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
-import { useContext } from 'react'
-import bgImage from './img/—Pngtree—abstract purple line wave background_5542852.png'
+import { useContext, useEffect } from 'react'
 import { themeContext } from './Context'
 
 function App() {
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode')
+    } else {
+      document.body.classList.remove('dark-mode')
+    }
+  }, [darkMode])
+
   return (
     <div
       className="App"
       style={{
-        backgroundColor: darkMode ? ' #121212 ' : '',
         color: darkMode ? 'white' : '',
-        backgroundImage: darkMode ? `url(${bgImage})` : '',
-        backgroundSize: 'contain',
-        backgroundPosition: 'initial',
-        backgroundRepeat: 'no-repeat',
       }}
     >
       <Navbar />

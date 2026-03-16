@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import './Portfolio.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper'
@@ -11,107 +12,75 @@ import { themeContext } from '../../Context'
 import Shopi from '../../img/shopi.png'
 import NestAPI from '../../img/nestapi.png'
 
+import { motion } from 'framer-motion'
+
 const Portfolio = () => {
+  const { t } = useTranslation()
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
-  const isMobile = window.innerWidth <= 480
 
-  const [isAnimating, setIsAnimating] = useState(true)
+  const projects = [
+    {
+      img: NestAPI,
+      link: 'https://ecommerce-api-dev.onrender.com/docs',
+      title: 'NestJS E-commerce API',
+    },
+    {
+      img: Sidebar,
+      link: 'https://react-nextjs-travel-app-landing.vercel.app/',
+      title: 'Travel App Landing',
+    },
+    {
+      img: Ecommerce,
+      link: 'https://notes-app-frontend-liard-three.vercel.app/',
+      title: 'FullStack Notes App',
+    },
+    {
+      img: MusicApp,
+      link: 'https://belenespilman.github.io/todo-app/',
+      title: 'Todo App',
+    },
+    {
+      img: HOC,
+      link: 'https://belenespilman.github.io/vite-react-disney-clone/',
+      title: 'Disney Clone',
+    },
+    {
+      img: Shopi,
+      link: 'https://e-commerce-react-tailwind.vercel.app/',
+      title: 'Shopi E-commerce',
+    },
+  ]
 
-  const handleSlideChange = (swiper) => {
-    setIsAnimating(!swiper.isEnd) // Detener animación en el último slide
-  }
-
-  useEffect(() => {
-    const nextArrow = document.querySelector('.swiper-button-next')
-    if (nextArrow) {
-      if (isAnimating) {
-        nextArrow.style.animation = 'moveArrow 1.2s ease-in-out infinite'
-      } else {
-        nextArrow.style.animation = 'none'
-      }
-    }
-  }, [isAnimating])
   return (
     <div className="portfolio" id="portfolio">
       {/* heading */}
-      <span style={{ color: darkMode ? 'white' : '' }}>Recent Projects</span>
-      <span>My Portfolio</span>
-      <p
-        className="p-swipe-cta"
-        style={{ color: darkMode ? 'var(--gray)' : '' }}
-      >
-        Swipe right to see more!
-      </p>
+      <span style={{ color: darkMode ? 'white' : '' }}>
+        {t('portfolio.recent')}
+      </span>
+      <span>{t('portfolio.my')}</span>
 
-      <Swiper
-        spaceBetween={isMobile ? 50 : 30}
-        slidesPerView={isMobile ? 1 : 3}
-        grabCursor={true}
-        className="portfolio-slider"
-        navigation={true}
-        modules={[Navigation]}
-        onSlideChange={handleSlideChange}
-      >
-        <SwiperSlide>
-          <a
-            className="swiper-a"
-            href="https://ecommerce-api-dev.onrender.com/docs"
-            target={'_blank'}
+      <div className="portfolio-grid">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            className="portfolio-card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ y: -10 }}
           >
-            <img
-              className="swiper-a"
-              src={NestAPI}
-              alt="nest api e-commerce img"
-            />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a
-            className="swiper-a"
-            href="https://react-nextjs-travel-app-landing.vercel.app/"
-            target={'_blank'}
-          >
-            <img className="swiper-a" src={Sidebar} alt="" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a
-            className="swiper-a"
-            href="https://notes-app-frontend-liard-three.vercel.app/"
-            target={'_blank'}
-          >
-            <img src={Ecommerce} alt="FullStack Notes App - React & NestJS" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a
-            className="swiper-a"
-            href="https://belenespilman.github.io/todo-app/"
-            target={'_blank'}
-          >
-            <img src={MusicApp} alt="ToDO APP" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a
-            className="swiper-a"
-            href="https://belenespilman.github.io/vite-react-disney-clone/"
-            target={'_blank'}
-          >
-            <img src={HOC} alt="" />
-          </a>
-        </SwiperSlide>
-        <SwiperSlide>
-          <a
-            className="swiper-a"
-            href="https://e-commerce-react-tailwind.vercel.app/"
-            target={'_blank'}
-          >
-            <img src={Shopi} alt="Shopi, ReactJS & Vite e-commerce" />
-          </a>
-        </SwiperSlide>
-      </Swiper>
+            <a href={project.link} target="_blank" rel="noreferrer">
+              <div className="p-card-image">
+                <img src={project.img} alt={project.title} />
+                <div className="p-card-overlay">
+                  <span>{project.title}</span>
+                </div>
+              </div>
+            </a>
+          </motion.div>
+        ))}
+      </div>
     </div>
   )
 }
