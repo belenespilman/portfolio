@@ -1,10 +1,26 @@
 .typing-container {
+  display: flex;
+  justify-content: center;
   text-align: center;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .typing-text {
   font-size: 11px;
-  color: var(--black);
-  line-height: normal;
-  margin: 0;
+  font-weight: normal;
+  margin-top: 32px;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 480px) {
+  .typing-text {
+    font-size: 9px;
+    margin-top: 20px;
+  }
+
+  .typing-container {
+    padding: 0 1.5rem;
+  }
 }

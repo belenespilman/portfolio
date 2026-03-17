@@ -6,7 +6,7 @@ import '../StudiesAnimation/StudiesAnimation.css'
 import { useTranslation } from 'react-i18next'
 
 const StudiesAnimation = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const theme = useContext(themeContext)
   const darkMode = theme.state.darkMode
   const [isInView, setIsInView] = useState(false)
@@ -54,7 +54,7 @@ const StudiesAnimation = () => {
       {textLines.map((line, index) => (
         <motion.div
           ref={observerRef}
-          key={index}
+          key={`${i18n.language}-${index}`}
           initial={{ opacity: 0, y: -20 }}
           animate={{
             opacity: isInView ? 1 : 0,
